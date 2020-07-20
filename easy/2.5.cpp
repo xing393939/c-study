@@ -4,8 +4,12 @@
 /*
  * printf函数必须包含stdio.h，要使用数学函数必须包含math.h
  */
+void increment(int x)
+{
+    x = x + 1;
+}
 
-int main() {
+int main(void) {
     int hour = 11;
     int minute = 59;
     printf("%d hours and %d percent of an hour\n", hour, minute * 100 / 60);
@@ -14,4 +18,8 @@ int main() {
 
     double pi = 3.1416;
     printf("sin(pi/2)=%f\nln1=%f\n", sin(pi/2), log(1.0));
+
+    int i = 1;
+    increment(i);
+    printf("i=%d\n", i);
 }
