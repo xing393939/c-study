@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>3.基础章节 · GitBook</title>
+        <title>3.C语言入门 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -133,7 +133,7 @@
                 <a href="3.html">
             
                     
-                    3.基础章节
+                    3.C语言入门
             
                 </a>
             
@@ -171,7 +171,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >3.基础章节</a>
+        <a href=".." >3.C语言入门</a>
     </h1>
 </div>
 
@@ -186,7 +186,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="&#x57FA;&#x7840;&#x7AE0;&#x8282;">&#x57FA;&#x7840;&#x7AE0;&#x8282;</h3>
+                                <h3 id="c&#x8BED;&#x8A00;&#x5165;&#x95E8;">C&#x8BED;&#x8A00;&#x5165;&#x95E8;</h3>
 <h4 id="&#x7B2C;-7-&#x7AE0;-&#x7ED3;&#x6784;&#x4F53;">&#x7B2C; 7 &#x7AE0; &#x7ED3;&#x6784;&#x4F53;</h4>
 <ol>
 <li>C&#x8BED;&#x8A00;&#x4E2D;&#x7684;&#x7ED3;&#x6784;&#x4F53;&#x7C7B;&#x4F3C;&#x53EA;&#x6709;&#x6210;&#x5458;&#x5C5E;&#x6027;&#x7684;&#x7C7B;&#x3002;</li>
@@ -204,6 +204,12 @@
 <li>&#x5B57;&#x7B26;&#x6570;&#x7EC4;&#x521D;&#x59CB;&#x5316;&#x6700;&#x597D;&#x4E0D;&#x6307;&#x5B9A;&#x957F;&#x5EA6;&#xFF1A;char str[] = &quot;Hello&quot;</li>
 <li>&#x591A;&#x7EF4;&#x6570;&#x7EC4;&#x9664;&#x4E86;&#x7B2C;&#x4E00;&#x7EF4;&#x7684;&#x957F;&#x5EA6;&#x53EF;&#x4EE5;&#x7531;&#x7F16;&#x8BD1;&#x5668;&#x81EA;&#x52A8;&#x8BA1;&#x7B97;&#x800C;&#x4E0D;&#x9700;&#x8981;&#x6307;&#x5B9A;&#xFF0C;&#x5176;&#x4F59;&#x5404;&#x7EF4;&#x90FD;&#x5FC5;&#x987B;&#x660E;&#x786E;&#x6307;&#x5B9A;&#x957F;&#x5EA6;&#xFF0C;&#x5982;int a[][2] = { { 1, 2 }, { 3, 4 }, { 5, } };</li>
 <li>&#x8F6C;&#x6362;&#x8BF4;&#x660E;%s&#x8BFB;&#x5165;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5219;&#x53C2;&#x6570;&#x5E94;&#x8BE5;&#x662F;&#x6570;&#x7EC4;&#x540D;&#xFF0C;&#x6570;&#x7EC4;&#x540D;&#x524D;&#x9762;&#x4E0D;&#x52A0;&amp;&#xFF0C;&#x56E0;&#x4E3A;&#x6570;&#x7EC4;&#x7C7B;&#x578B;&#x505A;&#x53F3;&#x503C;&#x65F6;&#x81EA;&#x52A8;&#x8F6C;&#x6362;&#x6210;&#x6307;&#x9488;&#x7C7B;&#x578B;&#xFF0C;&#x5982;scanf(&quot;%s&quot;, arr);</li>
+</ol>
+<h4 id="&#x7B2C;-10-&#x7AE0;-gdb&#x8C03;&#x8BD5;">&#x7B2C; 10 &#x7AE0; gdb&#x8C03;&#x8BD5;</h4>
+<ol>
+<li>&#x4EE3;&#x7801;10.1&#x5C40;&#x90E8;&#x53D8;&#x91CF;i&#x548C;sum&#x6CA1;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x6240;&#x4EE5;&#x5177;&#x6709;&#x4E0D;&#x786E;&#x5B9A;&#x7684;&#x503C;&#xFF0C;&#x53C8;&#x7531;&#x4E8E;&#x4E24;&#x6B21;&#x8C03;&#x7528;&#x662F;&#x6328;&#x7740;&#x7684;&#xFF0C;i&#x548C;sum&#x6B63;&#x597D;&#x53D6;&#x4E86;&#x4E0A;&#x6B21;&#x8C03;&#x7528;&#x65F6;&#x7684;&#x503C;</li>
+<li>&#x9519;&#x8BEF;&#x4FE1;&#x53F7;SIGSEGV&#xFF0C;&#x6BB5;&#x9519;&#x8BEF;Segmentation fault</li>
+<li>&#x5982;&#x679C;&#x67D0;&#x4E2A;&#x51FD;&#x6570;&#x7684;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x53D1;&#x751F;&#x8BBF;&#x95EE;&#x8D8A;&#x754C;&#xFF0C;&#x6709;&#x53EF;&#x80FD;&#x5E76;&#x4E0D;&#x7ACB;&#x5373;&#x4EA7;&#x751F;&#x6BB5;&#x9519;&#x8BEF;&#xFF0C;&#x800C;&#x662F;&#x5728;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x65F6;&#x4EA7;&#x751F;&#x6BB5;&#x9519;&#x8BEF;&#x3002;</li>
 </ol>
 
                                 
@@ -244,7 +250,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"3.基础章节","level":"1.4","depth":1,"previous":{"title":"2.编程环境搭建","level":"1.3","depth":1,"path":"docs/2.md","ref":"docs/2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/3.md","mtime":"2020-09-27T07:07:35.338Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-27T07:08:04.485Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"3.C语言入门","level":"1.4","depth":1,"previous":{"title":"2.编程环境搭建","level":"1.3","depth":1,"path":"docs/2.md","ref":"docs/2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/3.md","mtime":"2020-09-28T02:05:34.456Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-28T02:06:00.883Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
