@@ -231,6 +231,42 @@
 </li>
 <li>&#x5F3A;&#x5236;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#xFF1A;&#x4F8B;&#x5982;&#x8BA1;&#x7B97;&#x8868;&#x8FBE;&#x5F0F;(double)3 + i&#xFF0C;&#x9996;&#x5148;&#x5C06;&#x6574;&#x6570;3&#x5F3A;&#x5236;&#x8F6C;&#x6362;&#x6210;double&#x578B;&#xFF08;&#x503C;&#x4E3A;3.0&#xFF09;&#xFF0C;&#x7136;&#x540E;&#x548C;&#x6574;&#x578B;&#x53D8;&#x91CF;i&#x76F8;&#x52A0;</li>
 </ol>
+<h4 id="&#x7B2C;-16-&#x7AE0;-&#x8FD0;&#x7B97;&#x7B26;&#x8BE6;&#x89E3;">&#x7B2C; 16 &#x7AE0; &#x8FD0;&#x7B97;&#x7B26;&#x8BE6;&#x89E3;</h4>
+<ol>
+<li>&#x5728;&#x4E00;&#x5B9A;&#x7684;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x5185;&#xFF0C;&#x5C06;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x5DE6;&#x79FB;1&#x4F4D;&#x76F8;&#x5F53;&#x4E8E;&#x4E58;&#x4EE5;2&#xFF1B;&#x5C06;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x53F3;&#x79FB;1&#x4F4D;&#x76F8;&#x5F53;&#x4E8E;&#x9664;&#x4EE5;2&#x3002;</li>
+<li>&#x5EFA;&#x8BAE;&#x53EA;&#x5BF9;&#x65E0;&#x7B26;&#x53F7;&#x6570;&#x505A;&#x4F4D;&#x8FD0;&#x7B97;&#xFF0C;&#x4EE5;&#x51CF;&#x5C11;&#x51FA;&#x9519;&#x7684;&#x53EF;&#x80FD;&#x3002;</li>
+<li>&#x4F4D;&#x4E0E;&amp;&#xFF1A;0011 &amp; 0101 = 0001</li>
+<li>&#x4F4D;&#x6216;|&#xFF1A;0011 | 0101 = 0111</li>
+<li>&#x5F02;&#x6216;^&#xFF1A;0011 ^ 0101 = 0110 &#x4E00;&#x4E2A;&#x6570;&#x548C;&#x81EA;&#x5DF1;&#x505A;&#x5F02;&#x6216;&#x7684;&#x7ED3;&#x679C;&#x662F;0&#x3002;</li>
+<li>&#x53D6;&#x53CD;~: ~1100 = 0011</li>
+<li>&#x5DE6;&#x79FB;&lt;&lt; </li>
+<li>&#x53F3;&#x79FB;&gt;&gt;</li>
+<li>&#x4F8B;&#x5982;a[foo()] += 1&#x548C;a[foo()] = a[foo()] + 1&#xFF0C;&#x5982;&#x679C;foo()&#x4F1A;&#x6253;&#x5370;&#x6D88;&#x606F;&#xFF0C;&#x90A3;&#x4E48;&#x524D;&#x8005;&#x53EA;&#x6253;&#x5370;&#x4E00;&#x6B21;&#xFF0C;&#x800C;&#x540E;&#x8005;&#x6253;&#x5370;&#x4E24;&#x6B21;&#x3002;</li>
+<li>&#x9017;&#x53F7;&#x8FD0;&#x7B97;&#x7B26;&#xFF1A;&#x8868;&#x8FBE;&#x5F0F;1, &#x8868;&#x8FBE;&#x5F0F;2, &#x8868;&#x8FBE;&#x5F0F;3, ...&#x3002;&#x8868;&#x8FBE;&#x5F0F;1&#x5148;&#x6C42;&#x503C;&#xFF0C;&#x6C42;&#x5B8C;&#x4E86;&#x76F4;&#x63A5;&#x628A;&#x503C;&#x4E22;&#x6389;&#xFF0C;&#x518D;&#x6C42;&#x8868;&#x8FBE;&#x5F0F;2&#x7684;&#x503C;&#x4F5C;&#x4E3A;&#x6574;&#x4E2A;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x503C;&#x3002;</li>
+<li>sizeof&#x8FD0;&#x7B97;&#x7B26;&#x7684;&#x7ED3;&#x679C;&#x662F;size_t&#x7C7B;&#x578B;&#x7684;&#xFF0C;&#x8FD9;&#x4E2A;&#x7C7B;&#x578B;&#x5B9A;&#x4E49;&#x5728;stddef.h&#x5934;&#x6587;&#x4EF6;&#x4E2D;&#x3002;</li>
+<li>C&#x6807;&#x51C6;&#x89C4;&#x5B9A;size_t&#x662F;&#x4E00;&#x79CD;&#x65E0;&#x7B26;&#x53F7;&#x6574;&#x578B;</li>
+<li>&#x539F;&#x5219;&#x4E00;&#xFF1A;&#x5728;&#x4E24;&#x4E2A;Sequence Point&#x4E4B;&#x95F4;&#xFF0C;&#x540C;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x503C;&#x53EA;&#x5141;&#x8BB8;&#x88AB;&#x6539;&#x53D8;&#x4E00;&#x6B21;&#x3002;<ul>
+<li>&#x53CD;&#x4F8B;&#xFF1A;a = (++a)+(++a)+(++a)+(++a); &#x4E94;&#x4E2A;Side Effect&#x90FD;&#x5728;&#x6539;&#x53D8;a&#x7684;&#x503C;</li>
+</ul>
+</li>
+<li>&#x539F;&#x5219;&#x4E8C;&#xFF1A;&#x5982;&#x679C;&#x5728;&#x4E24;&#x4E2A;Sequence Point&#x4E4B;&#x95F4;&#x65E2;&#x8981;&#x8BFB;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x503C;&#x53C8;&#x8981;&#x6539;&#x5B83;&#x7684;&#x503C;&#xFF0C;&#x53EA;&#x6709;&#x5728;&#x8BFB;&#x5199;&#x987A;&#x5E8F;&#x786E;&#x5B9A;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x624D;&#x53EF;&#x4EE5;&#x8FD9;&#x4E48;&#x5199;&#x3002;<ul>
+<li>&#x53CD;&#x4F8B;&#xFF1A;a[i++] = i; &#x56E0;&#x4E3A;&#x7B49;&#x53F7;&#x5DE6;&#x8FB9;&#x6539;i&#x7684;&#x503C;&#xFF0C;&#x7B49;&#x53F7;&#x53F3;&#x8FB9;&#x8BFB;i&#x7684;&#x503C;&#xFF0C;&#x5230;&#x5E95;&#x662F;&#x5148;&#x6539;&#x8FD8;&#x662F;&#x5148;&#x8BFB;&#xFF1F;&#x8FD9;&#x4E2A;&#x8BFB;&#x5199;&#x987A;&#x5E8F;&#x662F;&#x4E0D;&#x786E;&#x5B9A;&#x7684;&#x3002;</li>
+</ul>
+</li>
+<li>&#x8FD0;&#x7B97;&#x7B26;&#xFF0C;&#x4F18;&#x5148;&#x7EA7;&#x4ECE;&#x9AD8;&#x5230;&#x4F4E;&#xFF1A;<ul>
+<li>()&#x62EC;&#x53F7;</li>
+<li>&#x540E;&#x7F00;&#x8FD0;&#x7B97;&#x7B26;&#xFF1A;&#x6570;&#x7EC4;&#x53D6;&#x4E0B;&#x6807;[]&#x3001;&#x51FD;&#x6570;&#x8C03;&#x7528;()&#x3001;&#x7ED3;&#x6784;&#x4F53;&#x53D6;&#x6210;&#x5458;&#x201C;.&#x201D;&#x3001;&#x6307;&#x9488;&#x53D6;&#x6210;&#x5458;-&gt;&#x3001;&#x540E;&#x7F00;&#x81EA;&#x589E;++&#x3001;&#x540E;&#x7F00;&#x81EA;&#x51CF;--</li>
+<li>&#x524D;&#x7F00;&#x8FD0;&#x7B97;&#x7B26;&#xFF1A;&#x524D;&#x7F00;&#x81EA;&#x589E;++&#x3001;&#x524D;&#x7F00;&#x81EA;&#x51CF;--&#x3001;sizeof&#x3001;&#x7C7B;&#x578B;&#x8F6C;&#x6362;()&#x3001;&#x53D6;&#x5730;&#x5740;&#x8FD0;&#x7B97;&amp;&#x3001;&#x6307;&#x9488;&#x95F4;&#x63A5;&#x5BFB;&#x5740;*&#x3001;&#x6B63;&#x53F7;+&#x3001;&#x8D1F;&#x53F7;-&#x3001;&#x6309;&#x4F4D;&#x53D6;&#x53CD;~&#x3001;&#x903B;&#x8F91;&#x975E;!</li>
+<li>&#x4E58;*&#x3001;&#x9664;/&#x3001;&#x6A21;%</li>
+<li>&#x52A0;+&#x3001;&#x51CF;-</li>
+<li>&#x79FB;&#x4F4D;&#x8FD0;&#x7B97;&#x7B26;&lt;&lt;&#x548C;&gt;&gt;</li>
+<li>&#x5173;&#x7CFB;&#x8FD0;&#x7B97;&#x7B26;&lt; &gt; &lt;= &gt;=</li>
+<li>&#x76F8;&#x7B49;&#x6027;&#x8FD0;&#x7B97;&#x7B26;==&#x548C;!=</li>
+<li>&#x4F4D;&#x4E0E;&amp;&#x3001;&#x4F4D;&#x6216;|&#x3001;&#x5F02;&#x6216;^&#x3001;&#x53D6;&#x53CD;~</li>
+<li>&#x903B;&#x8F91;&#x4E0E;&amp;&amp;&#x3001;&#x903B;&#x8F91;&#x6216;||</li>
+</ul>
+</li>
+</ol>
 
                                 
                                 </section>
@@ -270,7 +306,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"4.C语言本质","level":"1.5","depth":1,"previous":{"title":"3.C语言入门","level":"1.4","depth":1,"path":"docs/3.md","ref":"docs/3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/4.md","mtime":"2020-10-11T09:20:07.541Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-11T09:20:39.097Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"4.C语言本质","level":"1.5","depth":1,"previous":{"title":"3.C语言入门","level":"1.4","depth":1,"path":"docs/3.md","ref":"docs/3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/4.md","mtime":"2020-10-16T08:46:11.794Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-16T08:46:36.438Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
