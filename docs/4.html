@@ -349,6 +349,22 @@ movl %eax, %ebx                 # &#x521D;&#x59CB;&#x5316;ebx=eax</li>
  movl $1, %eax                  # &#x8C03;&#x7528;exit&#x9000;&#x51FA;
  int $0x80
 ```</p>
+<h4 id="&#x7B2C;-19-&#x7AE0;-&#x6C47;&#x7F16;&#x4E0E;c&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;">&#x7B2C; 19 &#x7AE0; &#x6C47;&#x7F16;&#x4E0E;C&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;</h4>
+<ol>
+<li>&#x5728;&#x6267;&#x884C;&#x7A0B;&#x5E8F;&#x65F6;&#xFF0C;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4E3A;&#x8FDB;&#x7A0B;&#x5206;&#x914D;&#x4E00;&#x5757;&#x6808;&#x7A7A;&#x95F4;&#x6765;&#x4FDD;&#x5B58;&#x51FD;&#x6570;&#x6808;&#x5E27;&#x3002;&#x5728;&#x6267;&#x884C;foo(2, 3)&#x65F6;&#xFF0C;esp&#x5BC4;&#x5B58;&#x5668;&#x603B;&#x662F;&#x6307;&#x5411;&#x6808;&#x9876;&#xFF0C;&#x51FD;&#x6570;&#x6808;&#x5E27;&#x4FDD;&#x5B58;&#x4E09;&#x4E2A;&#x503C;&#xFF1A;<ul>
+<li>esp=0xbf822d22</li>
+<li>&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4FDD;&#x5B58;&#x5728;esp+4&#x6307;&#x5411;&#x7684;&#x5185;&#x5B58;&#x4F4D;&#x7F6E;&#xFF0C;</li>
+<li>&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4FDD;&#x5B58;&#x5728;esp&#x6307;&#x5411;&#x7684;&#x5185;&#x5B58;&#x4F4D;&#x7F6E;</li>
+<li>&#x51FD;&#x6570;&#x7ED3;&#x675F;&#x540E;&#x4E0B;&#x4E00;&#x6761;&#x6307;&#x4EE4;&#x7684;&#x5730;&#x5740;&#xFF0C;&#x540C;&#x65F6;&#x628A;esp&#x7684;&#x503C;&#x51CF;4&#xFF0C;esp=0xbf822d18</li>
+</ul>
+</li>
+<li>&#x51FD;&#x6570;&#x8C03;&#x7528;&#x548C;&#x8FD4;&#x56DE;&#x8FC7;&#x7A0B;&#x4E2D;&#x7684;&#x89C4;&#x5219;&#xFF1A;<ul>
+<li>&#x53C2;&#x6570;&#x538B;&#x6808;&#x4F20;&#x9012;&#xFF0C;&#x5E76;&#x4E14;&#x662F;&#x4ECE;&#x53F3;&#x5411;&#x5DE6;&#x4F9D;&#x6B21;&#x538B;&#x6808;&#x3002;</li>
+<li>ebp&#x603B;&#x662F;&#x6307;&#x5411;&#x5F53;&#x524D;&#x6808;&#x5E27;&#x7684;&#x6808;&#x5E95;&#x3002;</li>
+<li>&#x8FD4;&#x56DE;&#x503C;&#x901A;&#x8FC7;eax&#x5BC4;&#x5B58;&#x5668;&#x4F20;&#x9012;&#x3002;</li>
+</ul>
+</li>
+</ol>
 
                                 
                                 </section>
@@ -388,7 +404,7 @@ movl %eax, %ebx                 # &#x521D;&#x59CB;&#x5316;ebx=eax</li>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"4.C语言本质","level":"1.5","depth":1,"previous":{"title":"3.C语言入门","level":"1.4","depth":1,"path":"docs/3.md","ref":"docs/3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/4.md","mtime":"2020-10-19T09:10:17.700Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-19T09:10:43.997Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"4.C语言本质","level":"1.5","depth":1,"previous":{"title":"3.C语言入门","level":"1.4","depth":1,"path":"docs/3.md","ref":"docs/3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/4.md","mtime":"2020-10-20T08:53:12.174Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-20T08:53:44.806Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
