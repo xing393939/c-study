@@ -22,6 +22,7 @@
 ### 每个程序员都应该了解的内存知识
 1. [每个程序员都应该了解的内存知识-0](https://lrita.github.io/2018/06/30/programmer-should-know-about-memory-0/)
 1. [每个程序员都应该了解的内存知识-1](https://lrita.github.io/2018/06/30/programmer-should-know-about-memory-1/)
+1. 对于写操作，CPU并不需要等待数据被安全地放入内存。只要指令具有类似的效果，就没有什么东西可以阻止CPU走捷径了，它可以早早地执行下一条指令
 
 |设备	|读操作所需周期| 内存空间  |
 |寄存器	|<= 1         |          |
