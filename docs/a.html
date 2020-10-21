@@ -1,0 +1,323 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>3.CPU指令的执行 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="3.html" />
+    
+    
+    <link rel="prev" href="2.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">目录</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="1.html">
+            
+                <a href="1.html">
+            
+                    
+                    1.C 语言介绍和发展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    2.编程环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="a.html">
+            
+                <a href="a.html">
+            
+                    
+                    3.CPU指令的执行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="3.html">
+            
+                <a href="3.html">
+            
+                    
+                    4.C语言入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="4.html">
+            
+                <a href="4.html">
+            
+                    
+                    5.C语言本质
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >3.CPU指令的执行</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="cpu&#x6307;&#x4EE4;&#x7684;&#x6267;&#x884C;">CPU&#x6307;&#x4EE4;&#x7684;&#x6267;&#x884C;</h3>
+<ol>
+<li><a href="https://www.coursera.org/lecture/jisuanji-biancheng/cpuzhi-ling-de-zhi-xing-o73Oz" target="_blank">CPU&#x6307;&#x4EE4;&#x7684;&#x6267;&#x884C;</a>&#xFF0C;&#x6E05;&#x534E;&#x5927;&#x5B66;&#x7684;&#x89C6;&#x9891;</li>
+<li><a href="https://software.intel.com/content/www/cn/zh/develop/articles/book-processor-architecture_cpu_work_process.html" target="_blank">CPU&#x7684;&#x5DE5;&#x4F5C;&#x8FC7;&#x7A0B;</a></li>
+<li>&#x6307;&#x4EE4;&#x7684;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#xFF1A;<ul>
+<li>&#x53D6;&#x6307;&#x4EE4;&#x9636;&#x6BB5;&#xFF1A;&#x7A0B;&#x5E8F;&#x8BA1;&#x6570;&#x5668;PC&#x4E2D;&#x7684;&#x6570;&#x503C;&#xFF0C;&#x7528;&#x6765;&#x6307;&#x793A;&#x5F53;&#x524D;&#x6307;&#x4EE4;&#x5728;&#x4E3B;&#x5B58;&#x4E2D;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x6839;&#x636E;&#x5F53;&#x524D;&#x6307;&#x4EE4;&#x957F;&#x5EA6;&#x53D6;&#x4E0B;&#x4E00;&#x6761;&#x6307;&#x4EE4;&#xFF08;&#x6BCF;&#x6761;&#x6307;&#x4EE4;&#x90FD;&#x6709;&#x6307;&#x4EE4;&#x7ED3;&#x675F;&#x7B26;&#xFF09;&#x3002;</li>
+<li>&#x6307;&#x4EE4;&#x8BD1;&#x7801;&#x9636;&#x6BB5;&#xFF1A;&#x6307;&#x4EE4;&#x8BD1;&#x7801;&#x5668;</li>
+<li>&#x6267;&#x884C;&#x6307;&#x4EE4;&#x9636;&#x6BB5;&#xFF1A;&#x53EF;&#x80FD;&#x4F1A;&#x7528;&#x5230;&#x7B97;&#x672F;&#x903B;&#x8F91;&#x5355;&#x5143;&#xFF08;ALU&#xFF09;&#xFF1B;&#x53EF;&#x80FD;&#x6839;&#x636E;&#x6307;&#x4EE4;&#x9700;&#x8981;&#xFF0C;&#x6709;&#x53EF;&#x80FD;&#x8981;&#x8BBF;&#x95EE;&#x4E3B;&#x5B58;&#xFF0C;&#x8BFB;&#x53D6;&#x64CD;&#x4F5C;&#x6570;&#x3002;</li>
+<li>&#x7ED3;&#x679C;&#x5199;&#x56DE;&#x9636;&#x6BB5;&#xFF1A;<ol>
+<li>&#x7ED3;&#x679C;&#x6570;&#x636E;&#x7ECF;&#x5E38;&#x88AB;&#x5199;&#x5230;CPU&#x7684;&#x5185;&#x90E8;&#x5BC4;&#x5B58;&#x5668;&#x4E2D;&#xFF0C;&#x4EE5;&#x4FBF;&#x88AB;&#x540E;&#x7EED;&#x7684;&#x6307;&#x4EE4;&#x5FEB;&#x901F;&#x5730;&#x5B58;&#x53D6;&#x3002;</li>
+<li>&#x7ED3;&#x679C;&#x6570;&#x636E;&#x53EF;&#x80FD;&#x5199;&#x5165;&#x8F83;&#x6162;&#xFF0C;&#x8BB8;&#x591A;&#x6307;&#x4EE4;&#x8FD8;&#x4F1A;&#x6539;&#x53D8;&#x7A0B;&#x5E8F;&#x72B6;&#x6001;&#x5B57;&#x5BC4;&#x5B58;&#x5668;&#x4E2D;&#x6807;&#x5FD7;&#x4F4D;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x8FD9;&#x4E9B;&#x6807;&#x5FD7;&#x4F4D;&#x6807;&#x8BC6;&#x7740;&#x4E0D;&#x540C;&#x7684;&#x64CD;&#x4F5C;&#x7ED3;&#x679C;&#xFF0C;&#x53EF;&#x88AB;&#x7528;&#x6765;&#x5F71;&#x54CD;&#x7A0B;&#x5E8F;&#x7684;&#x52A8;&#x4F5C;&#x3002;</li>
+</ol>
+</li>
+<li>&#x6307;&#x4EE4;&#x6267;&#x884C;&#x7ED3;&#x675F;&#xFF0C;&#x8BA1;&#x7B97;&#x673A;&#x5C31;&#x63A5;&#x7740;&#x4ECE;&#x7A0B;&#x5E8F;&#x8BA1;&#x6570;&#x5668;PC&#x4E2D;&#x53D6;&#x5F97;&#x4E0B;&#x4E00;&#x6761;&#x6307;&#x4EE4;&#x5730;&#x5740;&#xFF0C;&#x5F00;&#x59CB;&#x65B0;&#x4E00;&#x8F6E;&#x7684;&#x5FAA;&#x73AF;&#x3002;</li>
+</ul>
+</li>
+<li>&#x6307;&#x4EE4;&#x5468;&#x671F;&#xFF1A;CPU&#x53D6;&#x51FA;&#x4E00;&#x6761;&#x6307;&#x4EE4;&#x5E76;&#x6267;&#x884C;&#x8BE5;&#x6307;&#x4EE4;&#x6240;&#x9700;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x6307;&#x4EE4;&#x5468;&#x671F;=&#x82E5;&#x5E72;&#x4E2A;CPU&#x5468;&#x671F;&#x3002;</li>
+<li>CPU&#x5468;&#x671F;&#xFF1A;&#x6216;&#x79F0;&#x673A;&#x5668;&#x5468;&#x671F;&#xFF0C;&#x4ECE;&#x4E3B;&#x5B58;&#x8BFB;&#x53D6;&#x4E00;&#x6761;&#x6307;&#x4EE4;&#x7684;&#x6700;&#x77ED;&#x65F6;&#x95F4;&#x6765;&#x89C4;&#x5B9A;CPU&#x5468;&#x671F;&#xFF0C;CPU&#x5468;&#x671F;=&#x65F6;&#x949F;&#x5468;&#x671F;&#x3002;</li>
+<li>&#x65F6;&#x949F;&#x5468;&#x671F;&#xFF1A;&#x662F;&#x5904;&#x7406;&#x64CD;&#x4F5C;&#x7684;&#x6700;&#x57FA;&#x672C;&#x65F6;&#x95F4;&#x5355;&#x4F4D;&#xFF0C;&#x7531;&#x673A;&#x5668;&#x7684;&#x4E3B;&#x9891;&#x51B3;&#x5B9A;&#x3002;</li>
+<li>&#x4E00;&#x6761;&#x6307;&#x4EE4;&#x53D6;&#x6307;&#x4EE4;&#x9636;&#x6BB5;&#x9700;&#x8981;&#x4E00;&#x4E2A;CPU&#x5468;&#x671F;&#xFF0C;&#x6267;&#x884C;&#x6307;&#x4EE4;&#x9636;&#x6BB5;&#x9700;&#x8981;&#x81F3;&#x5C11;&#x4E00;&#x4E2A;CPU&#x5468;&#x671F;&#xFF1A;<ul>
+<li>&#x4F8B;&#x5982;CLA&#x6307;&#x4EE4;&#x662F;&#x4E00;&#x6761;&#x4E0D;&#x8BBF;&#x95EE;&#x4E3B;&#x5B58;&#x7684;&#x6E05;&#x96F6;&#x6307;&#x4EE4;&#xFF0C;&#x9700;&#x8981;2&#x4E2A;CPU&#x5468;&#x671F;&#xFF1A;1&#x53D6;&#x6307;&#x4EE4;&#x5E76;&#x8BD1;&#x7801;&#xFF0C;2&#x6267;&#x884C;</li>
+<li>&#x4F8B;&#x5982;ADD 30&#x6307;&#x4EE4;&#x662F;&#x4E00;&#x6761;&#x8BBF;&#x95EE;&#x4E3B;&#x5B58;&#x53D6;&#x6570;&#x5E76;&#x6267;&#x884C;&#x52A0;&#x6CD5;&#x7684;&#x6307;&#x4EE4;&#xFF0C;&#x9700;&#x8981;3&#x4E2A;CPU&#x5468;&#x671F;&#xFF1A;1&#x53D6;&#x6307;&#x4EE4;&#x5E76;&#x8BD1;&#x7801;&#xFF0C;2&#x628A;&#x5730;&#x5740;&#x7801;(30)&#x9001;&#x5F80;&#x5730;&#x5740;&#x5BC4;&#x5B58;&#x5668;&#x5E76;&#x5B8C;&#x6210;&#x5730;&#x5740;&#x8BD1;&#x7801;&#xFF0C;3&#x4ECE;&#x4E3B;&#x5B58;&#x53D6;&#x503C;&#x5E76;&#x6267;&#x884C;&#x52A0;&#x6CD5;</li>
+<li>&#x4F8B;&#x5982;STA 40&#x6307;&#x4EE4;&#x662F;&#x4E00;&#x6761;&#x8BBF;&#x95EE;&#x4E3B;&#x5B58;&#x7684;&#x5B58;&#x6570;&#x6307;&#x4EE4;&#xFF0C;&#x9700;&#x8981;3&#x4E2A;CPU&#x5468;&#x671F;&#xFF1A;1&#x53D6;&#x6307;&#x4EE4;&#x5E76;&#x8BD1;&#x7801;&#xFF0C;2&#x628A;&#x5730;&#x5740;&#x7801;(40)&#x9001;&#x5F80;&#x5730;&#x5740;&#x5BC4;&#x5B58;&#x5668;&#x5E76;&#x5B8C;&#x6210;&#x5730;&#x5740;&#x8BD1;&#x7801;&#xFF0C;3&#x628A;&#x503C;&#x5199;&#x5165;&#x4E3B;&#x5B58;</li>
+<li>&#x4F8B;&#x5982;JMP 21&#x6307;&#x4EE4;&#x662F;&#x4E00;&#x6761;&#x76F4;&#x63A5;&#x5BFB;&#x5740;&#x8DF3;&#x8F6C;&#x6307;&#x4EE4;&#xFF0C;&#x9700;&#x8981;2&#x4E2A;CPU&#x5468;&#x671F;&#xFF1A;1&#x53D6;&#x6307;&#x4EE4;&#x5E76;&#x8BD1;&#x7801;&#xFF0C;2&#x628A;&#x5730;&#x5740;&#x7801;(21)&#x9001;&#x5230;&#x7A0B;&#x5E8F;&#x8BA1;&#x6570;&#x5668;PC&#x4E2D;&#x5373;&#x53EF;</li>
+</ul>
+</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="2.html" class="navigation navigation-prev " aria-label="Previous page: 2.编程环境搭建">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="3.html" class="navigation navigation-next " aria-label="Next page: 4.C语言入门">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"3.CPU指令的执行","level":"1.4","depth":1,"next":{"title":"4.C语言入门","level":"1.5","depth":1,"path":"docs/3.md","ref":"docs/3.md","articles":[]},"previous":{"title":"2.编程环境搭建","level":"1.3","depth":1,"path":"docs/2.md","ref":"docs/2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/a.md","mtime":"2020-10-21T02:10:40.449Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-21T02:11:07.838Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
