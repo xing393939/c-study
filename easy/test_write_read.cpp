@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <sys/stat.h>
 
 int main(void) {
     FILE *fp1 = fopen("int.txt", "wb");
@@ -11,8 +12,8 @@ int main(void) {
     int data2[4];
     fread(data2, sizeof(int), 4, fp2);
     fclose(fp2);
-    for (int i : data2) {
-        printf("%d\n", i);
+    for (int i = 0; i < 4; i++) {
+        printf("%d\n", data1[i]);
     }
 
     typedef struct {
@@ -29,10 +30,13 @@ int main(void) {
     fclose(fp3);
 
     FILE *fp4 = fopen("people.txt", "rb");
-    people per2[20];
-    fread(per2, sizeof(people), 2, fp4);
+    struct stat buf;
+    stat("people.txt", &buf);
+    int rows = buf.st_size / sizeof(people);
+    people per2[rows];
+    fread(per2, sizeof(people), rows, fp4);
     fclose(fp4);
-    for (int i = 0; i < 2; i++) {
+    for (int i = 0; i < rows; i++) {
         printf("%d %s\n", per2[i].age, per2[i].name);
     }
 
