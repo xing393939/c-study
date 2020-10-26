@@ -29,10 +29,10 @@ int main(void) {
     fwrite(per1, sizeof(people), 2, fp3);
     fclose(fp3);
 
-    FILE *fp4 = fopen("people.txt", "rb");
     struct stat buf;
     stat("people.txt", &buf);
     int rows = buf.st_size / sizeof(people);
+    FILE *fp4 = fopen("people.txt", "rb");
     people per2[rows];
     fread(per2, sizeof(people), rows, fp4);
     fclose(fp4);
