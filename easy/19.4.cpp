@@ -13,9 +13,13 @@ typedef union {
     unsigned char byte[8];
 } demo_type;
 
-int main(void)
-{
-    demo_type u = {{ 1, 5, 513, 17, 129, 0x81 }};
+typedef union {
+    int i;
+    char m;
+} demo_char;
+
+int main(void) {
+    demo_type u = {{1, 5, 513, 17, 129, 0x81}};
     printf("sizeof demo_type = %u\n", sizeof(demo_type));
     printf("values: u=%u,%u,%u,%u,%u,%u\n",
            u.bitfield.one, u.bitfield.two, u.bitfield.three,
@@ -23,6 +27,14 @@ int main(void)
     printf("hex dump of u: %x %x %x %x %x %x %x %x \n",
            u.byte[0], u.byte[1], u.byte[2], u.byte[3],
            u.byte[4], u.byte[5], u.byte[6], u.byte[7]);
+
+    demo_char c;
+    c.i = 65;
+    printf("c.i=%d p=%p\n", c.i, &c.i);
+    printf("c.m=%c p=%p\n", c.m, &c.m);
+    c.i = 66;
+    printf("c.i=%d p=%p\n", c.i, &c.i);
+    printf("c.m=%c p=%p\n", c.m, &c.m);
 
     return 0;
 }
