@@ -247,6 +247,14 @@
 <li>&#x6C42;struct&#x6216;class&#x7684;&#x5927;&#x5C0F;&#x65F6;&#x5019;&#xFF0C;&#x9664;&#x4E86;&#x57FA;&#x672C;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x5927;&#x5C0F;&#xFF0C;&#x7279;&#x522B;&#x8981;&#x8003;&#x8651;&#x7684;&#x662F;&#x5B57;&#x8282;&#x5BF9;&#x9F50;&#x95EE;&#x9898;&#xFF0C;&#x5982;&#x679C;&#x662F;C++&#x7684;&#x8FD8;&#x6D89;&#x53CA;&#x865A;&#x51FD;&#x6570;&#x7684;&#x865A;&#x8868;&#x95EE;&#x9898;&#xFF0C;&#x9700;&#x8981;&#x52A0;&#x4E0A;&#x865A;&#x8868;&#x6307;&#x9488;&#x7684;&#x5927;&#x5C0F;</li>
 </ul>
 </li>
+<li><a href="https://blog.csdn.net/sunweiliang/article/details/82622038" target="_blank">&#x5173;&#x4E8E;float/double&#x7684;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x3001;&#x7CBE;&#x5EA6;&#x548C;&#x8868;&#x793A;</a><ul>
+<li>&#x79D1;&#x5B66;&#x8BA1;&#x6570;&#x6CD5;&#xFF1A;8.25*10^0 = &#x5C3E;&#x6570; &#xD7; &#x5E95;&#x6570; ^ &#x6307;&#x6570; = 1000.01 x 2 ^ 0 = 1.0001 x 2 ^ 3 = 0 10000010 0001000 00000000 00000000</li>
+<li>float&#xFF0C;&#x7B26;&#x53F7;&#x4F4D;1&#x4F4D;&#xFF0C;&#x6307;&#x6570;8&#x4F4D;&#xFF0C;&#x5C3E;&#x6570;23&#x4F4D;&#xFF0C;&#x5C3E;&#x6570;&#x7B2C;&#x4E00;&#x4F4D;&#x7684;1&#x53EF;&#x4EE5;&#x7701;&#x7565;&#xFF0C;&#x6240;&#x4EE5;&#x7CBE;&#x5EA6;&#x662F;24&#x4F4D;</li>
+<li>float&#xFF0C;&#x6B63;&#x6570;&#x7684;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x4E3A;+1.111111111111111111111<em>2^127 &#x2248; 2</em>2^127 &#x2248; 3.4*10^38</li>
+<li>double&#xFF0C;&#x7B26;&#x53F7;&#x4F4D;1&#x4F4D;&#xFF0C;&#x6307;&#x6570;11&#x4F4D;&#xFF0C;&#x5C3E;&#x6570;52&#x4F4D;</li>
+<li>float&#x7684;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x6BD4;int&#x5927;&#x5F88;&#x591A;&#xFF0C;&#x4F46;&#x662F;&#x7CBE;&#x5EA6;&#x53D7;&#x5C3E;&#x6570;(2^23)&#x9650;&#x5236;&#xFF0C;&#x6700;&#x591A;&#x53EA;&#x80FD;&#x7CBE;&#x786E;6&#x4E2A;&#x6570;&#x5B57;</li>
+</ul>
+</li>
 </ol>
 <table>
 <thead>
@@ -322,7 +330,7 @@
 <td>float&#x3000;&#x3000;</td>
 <td>4</td>
 <td>4</td>
-<td>3.4E +/- 38 (7 digits)</td>
+<td>3.4E +/- 38 (6 digits)</td>
 </tr>
 <tr>
 <td>double</td>
@@ -371,7 +379,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"b.基本数据类型所占内存大小","level":"1.8","depth":1,"previous":{"title":"b.printf函数规定符","level":"1.7","depth":1,"path":"docs/b.md","ref":"docs/b.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/c.md","mtime":"2020-10-27T03:57:04.425Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-27T03:57:34.413Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"b.基本数据类型所占内存大小","level":"1.8","depth":1,"previous":{"title":"b.printf函数规定符","level":"1.7","depth":1,"path":"docs/b.md","ref":"docs/b.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/c.md","mtime":"2020-10-27T07:07:57.105Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-27T07:08:24.734Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
