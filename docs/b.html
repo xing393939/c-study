@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>2.编程环境搭建 · GitBook</title>
+        <title>b.printf函数规定符 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="3.html" />
+    <link rel="next" href="c.html" />
     
     
-    <link rel="prev" href="1.html" />
+    <link rel="prev" href="a.html" />
     
 
     </head>
@@ -117,7 +117,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3" data-path="2.html">
+        <li class="chapter " data-level="1.3" data-path="2.html">
             
                 <a href="2.html">
             
@@ -169,7 +169,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7" data-path="b.html">
+        <li class="chapter active" data-level="1.7" data-path="b.html">
             
                 <a href="b.html">
             
@@ -225,7 +225,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >2.编程环境搭建</a>
+        <a href=".." >b.printf函数规定符</a>
     </h1>
 </div>
 
@@ -240,29 +240,22 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="&#x7F16;&#x7A0B;&#x73AF;&#x5883;&#x642D;&#x5EFA;">&#x7F16;&#x7A0B;&#x73AF;&#x5883;&#x642D;&#x5EFA;</h3>
+                                <h3 id="printf&#x51FD;&#x6570;&#x89C4;&#x5B9A;&#x7B26;">printf&#x51FD;&#x6570;&#x89C4;&#x5B9A;&#x7B26;</h3>
 <ol>
-<li>&#x5B89;&#x88C5;CLion 2019</li>
-<li>&#x914D;&#x7F6E;&#x7F16;&#x8BD1;&#x73AF;&#x5883;&#x6709;&#x4E09;&#x79CD;&#x65B9;&#x6CD5;&#xFF1A;Cygwin&#x3001;Mingw&#x3001;Remote host<ol>
-<li>Cygwin&#x7684;&#x5B89;&#x88C5;&#x65B9;&#x6CD5;&#xFF0C;&#x89C1;<a href="https://www.cnblogs.com/grey-wolf/p/12637730.html" target="_blank">&#x94FE;&#x63A5;</a></li>
-<li>Mingw&#x7684;&#x5B89;&#x88C5;&#x65B9;&#x6CD5;&#x6682;&#x65E0;</li>
-<li>Remote host &#x8FDC;&#x7A0B;linux&#x73AF;&#x5883;&#xFF0C;&#x5982;centos&#xFF1A;<ul>
-<li>yum install g++</li>
-<li>yum install gcc-c++</li>
-<li>yum install cmake</li>
-<li>yum install gdb</li>
-</ul>
-</li>
-<li>Remote host &#x8FDC;&#x7A0B;linux&#x73AF;&#x5883;&#xFF0C;&#x5982;ubuntu&#xFF1A;<ul>
-<li>apt install g++</li>
-<li>apt install cmake</li>
-<li>apt install gdb</li>
-</ul>
-</li>
-<li>Remote host &#x6A21;&#x5F0F;Run&#x7684;&#x65F6;&#x5019;&#x9047;&#x5230;Error: cmake-build-debug is not a directory&#x3002;&#x6267;&#x884C;&#x83DC;&#x5355;File&#x2014;&#x2014;Reload CMake Project&#x5373;&#x53EF;</li>
-</ol>
-</li>
-<li>&#x5176;&#x4E2D; MinGW &#x662F; Cygwin &#x4E0B;&#x7684;&#x8F6F;&#x4EF6;&#x5305;&#xFF0C;&#x5177;&#x4F53;&#x533A;&#x522B;&#x89C1;<a href="https://www.zhihu.com/question/22137175/answer/80239625" target="_blank">Cygwin &#x548C;MinGW &#x7684;&#x533A;&#x522B;&#x4E0E;&#x8054;&#x7CFB;&#x662F;&#x600E;&#x6837;&#x7684;</a></li>
+<li><a href="https://www.runoob.com/cprogramming/c-function-printf.html" target="_blank">C &#x5E93;&#x51FD;&#x6570; - printf</a></li>
+<li>%d &#x5341;&#x8FDB;&#x5236;&#x6709;&#x7B26;&#x53F7;&#x6574;&#x6570;</li>
+<li>%u &#x5341;&#x8FDB;&#x5236;&#x65E0;&#x7B26;&#x53F7;&#x6574;&#x6570;</li>
+<li>%f &#x6D6E;&#x70B9;&#x6570;</li>
+<li>%s &#x5B57;&#x7B26;&#x4E32;</li>
+<li>%c &#x5355;&#x4E2A;&#x5B57;&#x7B26;</li>
+<li>%p &#x6307;&#x9488;&#x7684;&#x503C;</li>
+<li>%e &#x6307;&#x6570;&#x5F62;&#x5F0F;&#x7684;&#x6D6E;&#x70B9;&#x6570;</li>
+<li>%x, %X &#x65E0;&#x7B26;&#x53F7;&#x4EE5;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x8868;&#x793A;&#x7684;&#x6574;&#x6570;</li>
+<li>%o &#x65E0;&#x7B26;&#x53F7;&#x4EE5;&#x516B;&#x8FDB;&#x5236;&#x8868;&#x793A;&#x7684;&#x6574;&#x6570;</li>
+<li>%g &#x628A;&#x8F93;&#x51FA;&#x7684;&#x503C;&#x6309;&#x7167; %e &#x6216;&#x8005; %f &#x7C7B;&#x578B;&#x4E2D;&#x8F93;&#x51FA;&#x957F;&#x5EA6;&#x8F83;&#x5C0F;&#x7684;&#x65B9;&#x5F0F;&#x8F93;&#x51FA;</li>
+<li>%p &#x8F93;&#x51FA;&#x5730;&#x5740;&#x7B26;</li>
+<li>%lu 32&#x4F4D;&#x65E0;&#x7B26;&#x53F7;&#x6574;&#x6570;</li>
+<li>%llu 64&#x4F4D;&#x65E0;&#x7B26;&#x53F7;&#x6574;&#x6570;</li>
 </ol>
 
                                 
@@ -291,12 +284,12 @@
 
             
                 
-                <a href="1.html" class="navigation navigation-prev " aria-label="Previous page: 1.C 语言介绍和发展">
+                <a href="a.html" class="navigation navigation-prev " aria-label="Previous page: a.CPU指令的执行">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="3.html" class="navigation navigation-next " aria-label="Next page: 3.C语言入门">
+                <a href="c.html" class="navigation navigation-next " aria-label="Next page: b.基本数据类型所占内存大小">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -307,7 +300,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"2.编程环境搭建","level":"1.3","depth":1,"next":{"title":"3.C语言入门","level":"1.4","depth":1,"path":"docs/3.md","ref":"docs/3.md","articles":[]},"previous":{"title":"1.C 语言介绍和发展","level":"1.2","depth":1,"path":"docs/1.md","ref":"docs/1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/2.md","mtime":"2020-10-27T03:57:04.425Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-27T03:57:34.413Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"b.printf函数规定符","level":"1.7","depth":1,"next":{"title":"b.基本数据类型所占内存大小","level":"1.8","depth":1,"path":"docs/c.md","ref":"docs/c.md","articles":[]},"previous":{"title":"a.CPU指令的执行","level":"1.6","depth":1,"path":"docs/a.md","ref":"docs/a.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/b.md","mtime":"2020-10-27T03:57:04.425Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-27T03:57:34.413Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
