@@ -490,7 +490,58 @@ main(void)
 </li>
 <li>&#x7ED3;&#x6784;&#x4F53;&#x7684;&#x5B58;&#x50A8;&#x5E03;&#x5C40;&#xFF1A;&#x7ED3;&#x6784;&#x4F53;&#x7684;&#x6210;&#x5458;&#x5E76;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x6328;&#x7740;&#x4E00;&#x4E2A;&#x7684;&#xFF0C;&#x5982;&#x679C;1&#x5B57;&#x8282;&#x6210;&#x5458;&#x540E;&#x6709;2&#x5B57;&#x8282;&#x6210;&#x5458;&#xFF0C;&#x5219;&#x4E2D;&#x95F4;&#x9700;&#x8981;&#x586B;&#x5145;&#x4E00;&#x4E2A;&#x5B57;&#x8282;&#xFF0C;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x6210;&#x5458;&#x8981;&#x586B;&#x5145;&#x81F3;4&#x5B57;&#x8282;</li>
 <li>&#x8054;&#x5408;&#x4F53;&#xFF1A;&#x51E0;&#x4E2A;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x53D8;&#x91CF;&#x5171;&#x5360;&#x4E00;&#x6BB5;&#x5185;&#x5B58;(&#x76F8;&#x4E92;&#x8986;&#x76D6;)                             </li>
+<li>C&#x5185;&#x8054;&#x6C47;&#x7F16;&#xFF1A;<ul>
+<li>&#x7B2C;&#x4E00;&#x90E8;&#x5206;&#x662F;&#x6C47;&#x7F16;&#x6307;&#x4EE4;</li>
+<li>&#x7B2C;&#x4E8C;&#x90E8;&#x5206;&#x6307;&#x793A;&#x5C06;&#x7ED3;&#x679C;&#x8F93;&#x51FA;&#x7ED9;&#x8C01;</li>
+<li>&#x7B2C;&#x4E09;&#x90E8;&#x5206;&#x6307;&#x793A;&#x4ECE;&#x54EA;&#x91CC;&#x83B7;&#x5F97;&#x8F93;&#x5165;</li>
+<li>&#x7B2C;&#x56DB;&#x90E8;&#x5206;&#x6307;&#x793A;&#x9700;&#x8981;&#x7528;&#x54EA;&#x4E9B;&#x5BC4;&#x5B58;&#x5668;&#xFF0C;&#x5728;&#x6B64;&#x671F;&#x95F4;&#x4E0D;&#x8981;&#x4FDD;&#x5B58;&#x5176;&#x5B83;&#x503C;</li>
+</ul>
+</li>
+<li>C&#x8BED;&#x8A00;&#x63A7;&#x5236;&#x4E32;&#x53E3;&#x8BBE;&#x5907;&#xFF0C;&#x5BF9;&#x540C;&#x4E00;&#x4E2A;&#x5730;&#x5740;&#x591A;&#x6B21;&#x5199;&#x548C;&#x591A;&#x6B21;&#x8BFB;&#xFF0C;&#x7F16;&#x8BD1;&#x5668;&#x53EF;&#x80FD;&#x4F1A;&#x4F18;&#x5316;&#x6210;&#x6700;&#x540E;&#x4E00;&#x6B21;&#x5199;&#x548C;&#x6700;&#x540E;&#x4E00;&#x6B21;&#x8BFB;&#xFF0C;&#x52A0;&#x4E0A;volatile&#x4FEE;&#x9970;&#x7B26;&#x53EF;&#x4EE5;&#x907F;&#x514D;</li>
+<li>&#x5F53;&#x4E00;&#x4E2A;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x88AB;&#x540C;&#x4E00;&#x8FDB;&#x7A0B;&#x4E2D;&#x7684;&#x591A;&#x4E2A;&#x63A7;&#x5236;&#x6D41;&#x7A0B;&#x8BBF;&#x95EE;&#x65F6;&#x4E5F;&#x8981;&#x7528;volatile&#x9650;&#x5B9A;&#xFF0C;&#x6BD4;&#x5982;&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x51FD;&#x6570;&#x548C;&#x591A;&#x7EBF;&#x7A0B;&#x3002;</li>
 </ol>
+<h4 id="&#x7B2C;-20-&#x7AE0;-&#x94FE;&#x63A5;&#x8BE6;&#x89E3;">&#x7B2C; 20 &#x7AE0; &#x94FE;&#x63A5;&#x8BE6;&#x89E3;</h4>
+<ol>
+<li>extern&#x5173;&#x952E;&#x5B57;&#x4FEE;&#x9970;&#x51FD;&#x6570;&#x58F0;&#x660E;&#x548C;&#x53D8;&#x91CF;&#x58F0;&#x660E;&#xFF0C;&#x8868;&#x793A;&#x5B83;&#x5177;&#x6709;External Linkage&#xFF0C;&#x51FD;&#x6570;&#x58F0;&#x660E;&#x7684;extern&#x53EF;&#x5199;&#x53EF;&#x4E0D;&#x5199;</li>
+<li>static&#x5173;&#x952E;&#x5B57;&#x4FEE;&#x9970;&#x51FD;&#x6570;&#x58F0;&#x660E;&#x548C;&#x53D8;&#x91CF;&#x58F0;&#x660E;&#xFF0C;&#x8868;&#x793A;&#x5B83;&#x53EA;&#x5177;&#x6709;Internal Linkage&#xFF0C;&#x662F;&#x4E00;&#x4E2A;LOCAL&#x7684;&#x7B26;&#x53F7;&#xFF0C;&#x4E0D;&#x53C2;&#x4E0E;&#x94FE;&#x63A5;&#x8FC7;&#x7A0B;</li>
+<li>#include <hello.h>&#xFF0C;gcc&#x9996;&#x5148;&#x67E5;&#x627E;-I&#x9009;&#x9879;&#x6307;&#x5B9A;&#x7684;&#x76EE;&#x5F55;&#xFF0C;&#x7136;&#x540E;&#x67E5;&#x627E;&#x7CFB;&#x7EDF;&#x7684;&#x5934;&#x6587;&#x4EF6;&#x76EE;&#x5F55;</hello.h></li>
+<li>#include &quot;hello.h&quot;&#xFF0C;gcc&#x9996;&#x5148;&#x67E5;&#x627E;&#x5305;&#x542B;&#x5934;&#x6587;&#x4EF6;&#x7684;.c&#x6587;&#x4EF6;&#x6240;&#x5728;&#x7684;&#x76EE;&#x5F55;&#xFF0C;&#x7136;&#x540E;&#x67E5;&#x627E;-I&#x9009;&#x9879;&#x6307;&#x5B9A;&#x7684;&#x76EE;&#x5F55;&#xFF0C;&#x7136;&#x540E;&#x67E5;&#x627E;&#x7CFB;&#x7EDF;&#x7684;&#x5934;&#x6587;&#x4EF6;&#x76EE;&#x5F55;</li>
+<li>Static Initializer&#xFF1A;&#x53EA;&#x80FD;&#x4F7F;&#x7528;&#x5E38;&#x91CF;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x503C;&#x5FC5;&#x987B;&#x5728;&#x7F16;&#x8BD1;&#x65F6;&#x5C31;&#x80FD;&#x786E;&#x5B9A;&#x3002;Dynamic Initializer&#xFF1A;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4EFB;&#x610F;&#x7684;&#x53F3;&#x503C;&#x8868;&#x8FBE;&#x5F0F;</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>&#x5B58;&#x50A8;&#x7C7B;&#x4FEE;&#x9970;&#x7B26;</th>
+<th>&#x51FD;&#x6570;&#x58F0;&#x660E;(File Scope)</th>
+<th>&#x51FD;&#x6570;&#x58F0;&#x660E;(Block Scope)</th>
+<th>&#x53D8;&#x91CF;&#x58F0;&#x660E;(File Scope)</th>
+<th>&#x53D8;&#x91CF;&#x58F0;&#x660E;(Block Scope)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(&#x7A7A;)</td>
+<td>previous linkage</td>
+<td>previous linkage</td>
+<td>external linkage<br>&#x9759;&#x6001;&#x751F;&#x5B58;&#x671F;<br>Static Initializer</td>
+<td>no linkage<br>&#x81EA;&#x52A8;&#x751F;&#x5B58;&#x6743;<br>dynamic initializer</td>
+</tr>
+<tr>
+<td>extern</td>
+<td>previous linkage<br>&#x80FD;&#x7528;extern</td>
+<td>previous linkage<br>&#x4E0D;&#x80FD;&#x7528;</td>
+<td>previous linkage<br>&#x9759;&#x6001;&#x751F;&#x5B58;&#x671F;<br>no initializer</td>
+<td>previous linkage<br>&#x9759;&#x6001;&#x751F;&#x5B58;&#x671F;<br>no initializer</td>
+</tr>
+<tr>
+<td>static</td>
+<td>internal linkage<br>&#x80FD;&#x7528;static</td>
+<td>(&#x7A7A;)<br>&#x4E0D;&#x80FD;&#x7528;</td>
+<td>internal linkage<br>&#x9759;&#x6001;&#x751F;&#x5B58;&#x671F;<br>Static Initializer</td>
+<td>no linkage<br>&#x9759;&#x6001;&#x751F;&#x5B58;&#x671F;<br>Static Initializer</td>
+</tr>
+</tbody>
+</table>
 
                                 
                                 </section>
@@ -534,7 +585,7 @@ main(void)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"4.C语言本质","level":"1.5","depth":1,"next":{"title":"a.CPU指令的执行","level":"1.6","depth":1,"path":"docs/a.md","ref":"docs/a.md","articles":[]},"previous":{"title":"3.C语言入门","level":"1.4","depth":1,"path":"docs/3.md","ref":"docs/3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/4.md","mtime":"2020-10-27T08:08:13.403Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-27T08:08:38.488Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"4.C语言本质","level":"1.5","depth":1,"next":{"title":"a.CPU指令的执行","level":"1.6","depth":1,"path":"docs/a.md","ref":"docs/a.md","articles":[]},"previous":{"title":"3.C语言入门","level":"1.4","depth":1,"path":"docs/3.md","ref":"docs/3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/4.md","mtime":"2020-10-28T03:44:15.862Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-28T03:44:43.286Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
