@@ -581,7 +581,7 @@ main(void)
 </ul>
 </li>
 </ol>
-<p>&#x7B2C; 21 &#x7AE0; C&#x7F16;&#x8BD1;&#x5668;&#x7684;&#x9884;&#x5904;&#x7406;</p>
+<h4 id="&#x7B2C;-21-&#x7AE0;-c&#x7F16;&#x8BD1;&#x5668;&#x7684;&#x9884;&#x5904;&#x7406;">&#x7B2C; 21 &#x7AE0; C&#x7F16;&#x8BD1;&#x5668;&#x7684;&#x9884;&#x5904;&#x7406;</h4>
 <ol>
 <li>&#x9884;&#x5904;&#x7406;&#x6B65;&#x9AA4;&#xFF1A;<ul>
 <li>&#x628A;&#x4E09;&#x8FDE;&#x7B26;&#x66FF;&#x6362;&#x6210;&#x76F8;&#x5E94;&#x7684;&#x5355;&#x5B57;&#x7B26;&#xFF0C;&#x4F8B;&#x5982;&#x7528;??=&#x8868;&#x793A;#&#x5B57;&#x7B26;</li>
@@ -605,6 +605,32 @@ main(void)
 <li>&#x53EA;&#x8981;&#x5C0F;&#x5FC3;&#x4F7F;&#x7528;&#x51FD;&#x6570;&#x5F0F;&#x5B8F;&#x5B9A;&#x4E49;&#x8FD8;&#x662F;&#x4F1A;&#x663E;&#x8457;&#x63D0;&#x9AD8;&#x4EE3;&#x7801;&#x7684;&#x6267;&#x884C;&#x6548;&#x7387;&#xFF0C;&#x6BD5;&#x7ADF;&#x7701;&#x53BB;&#x4E86;&#x5206;&#x914D;&#x548C;&#x91CA;&#x653E;&#x6808;&#x5E27;&#x3001;&#x4F20;&#x53C2;&#x3001;&#x4F20;&#x8FD4;&#x56DE;&#x503C;&#x7B49;&#x4E00;&#x7CFB;&#x5217;&#x5DE5;&#x4F5C;</li>
 <li>&#x5185;&#x8054;&#x51FD;&#x6570;&#xFF1A;C99&#x5F15;&#x5165;&#x4E00;&#x4E2A;&#x65B0;&#x5173;&#x952E;&#x5B57;inline&#xFF0C;&#x7528;&#x4E8E;&#x5B9A;&#x4E49;&#x5185;&#x8054;&#x51FD;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x5F53;&#x666E;&#x901A;&#x7684;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x5B9E;&#x73B0;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x5B8F;&#x5C55;&#x5F00;&#x7684;&#x529E;&#x6CD5;&#x5B9E;&#x73B0;</li>
 <li>#if&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x5FC5;&#x987B;&#x5728;&#x7F16;&#x8BD1;&#x65F6;&#x6C42;&#x503C;</li>
+</ol>
+<h4 id="&#x7B2C;-22-&#x7AE0;-makefile&#x57FA;&#x7840;">&#x7B2C; 22 &#x7AE0; Makefile&#x57FA;&#x7840;</h4>
+<ol>
+<li>make&#xFF1A;&#x7F16;&#x8BD1;&#xFF0C;&#x5982;&#x679C;&#x6E90;&#x6587;&#x4EF6;&#x6CA1;&#x6709;&#x66F4;&#x65B0;&#xFF0C;&#x7B2C;&#x4E8C;&#x6B21;&#x76F4;&#x63A5;&#x8DF3;&#x8FC7;</li>
+<li>make install&#xFF1A;&#x6267;&#x884C;&#x7F16;&#x8BD1;&#x540E;&#x7684;&#x5B89;&#x88C5;&#x5DE5;&#x4F5C;&#xFF0C;&#x628A;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x3001;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x3001;&#x6587;&#x6863;&#x7B49;&#x5206;&#x522B;&#x62F7;&#x5230;&#x4E0D;&#x540C;&#x7684;&#x5B89;&#x88C5;&#x76EE;&#x5F55;</li>
+<li>make clean&#xFF1A;&#x5220;&#x9664;&#x7F16;&#x8BD1;&#x751F;&#x6210;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;</li>
+<li>make distclean&#xFF1A;&#x4E0D;&#x4EC5;&#x5220;&#x9664;&#x7F16;&#x8BD1;&#x751F;&#x6210;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#xFF0C;&#x4E5F;&#x5220;&#x9664;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x548C;&#x683C;&#x5F0F;&#x8F6C;&#x6362;&#x540E;&#x7684;&#x6587;&#x6863;</li>
+<li>Makefile&#x9690;&#x85CF;&#x7684;&#x4E09;&#x4E2A;&#x89C4;&#x5219;&#xFF1A;<ul>
+<li>OUTPUT_OPTION = -o $@  #$@&#x7684;&#x53D6;&#x503C;&#x4E3A;&#x89C4;&#x5219;&#x4E2D;&#x7684;&#x76EE;&#x6807;</li>
+<li>CC = cc  #cc&#x662F;&#x4E00;&#x4E2A;&#x7B26;&#x53F7;&#x94FE;&#x63A5;&#xFF0C;&#x901A;&#x5E38;&#x6307;&#x5411;gcc</li>
+<li>COMPILE.c = $(CC) $(CFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -c  #&#x7F16;&#x8BD1;&#x7684;&#x547D;&#x4EE4;</li>
+</ul>
+</li>
+<li>Makefile&#x7279;&#x6B8A;&#x7684;&#x53D8;&#x91CF;&#x6709;&#xFF1A;<ul>
+<li>$@&#xFF0C;&#x8868;&#x793A;&#x89C4;&#x5219;&#x4E2D;&#x7684;&#x76EE;&#x6807;&#x3002;</li>
+<li>$&lt;&#xFF0C;&#x8868;&#x793A;&#x89C4;&#x5219;&#x4E2D;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x6761;&#x4EF6;&#x3002;</li>
+<li>$?&#xFF0C;&#x8868;&#x793A;&#x89C4;&#x5219;&#x4E2D;&#x6240;&#x6709;&#x6BD4;&#x76EE;&#x6807;&#x65B0;&#x7684;&#x6761;&#x4EF6;&#xFF0C;&#x7EC4;&#x6210;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#xFF0C;&#x4EE5;&#x7A7A;&#x683C;&#x5206;&#x9694;&#x3002;</li>
+<li>$^&#xFF0C;&#x8868;&#x793A;&#x89C4;&#x5219;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x6761;&#x4EF6;&#xFF0C;&#x7EC4;&#x6210;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#xFF0C;&#x4EE5;&#x7A7A;&#x683C;&#x5206;&#x9694;&#x3002;</li>
+</ul>
+</li>
+<li>&#x5E38;&#x7528;&#x7684;make&#x547D;&#x4EE4;&#x884C;&#x9009;&#x9879;<ul>
+<li>make -n&#xFF1A;&#x53EA;&#x6253;&#x5370;&#x8981;&#x6267;&#x884C;&#x7684;&#x547D;&#x4EE4;&#xFF0C;&#x800C;&#x4E0D;&#x4F1A;&#x771F;&#x7684;&#x6267;&#x884C;&#x547D;&#x4EE4;</li>
+<li>make -C subdir&#xFF1A;&#x5207;&#x6362;&#x5230;subdir&#x76EE;&#x5F55;&#x6267;&#x884C;Makefile</li>
+<li>make CFLAGS=-g&#xFF1A;&#x7F16;&#x8BD1;&#x7684;&#x8C03;&#x8BD5;&#x9009;&#x9879;-g</li>
+</ul>
+</li>
 </ol>
 
                                 
@@ -649,7 +675,7 @@ main(void)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"4.C语言本质","level":"1.5","depth":1,"next":{"title":"a.CPU指令的执行","level":"1.6","depth":1,"path":"docs/a.md","ref":"docs/a.md","articles":[]},"previous":{"title":"3.C语言入门","level":"1.4","depth":1,"path":"docs/3.md","ref":"docs/3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/4.md","mtime":"2020-10-30T10:03:06.596Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-30T10:03:33.974Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"4.C语言本质","level":"1.5","depth":1,"next":{"title":"a.CPU指令的执行","level":"1.6","depth":1,"path":"docs/a.md","ref":"docs/a.md","articles":[]},"previous":{"title":"3.C语言入门","level":"1.4","depth":1,"path":"docs/3.md","ref":"docs/3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/4.md","mtime":"2020-11-01T09:01:33.504Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-01T09:02:00.575Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
