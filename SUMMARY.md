@@ -11,3 +11,4 @@
 * [c.基本数据类型所占内存大小](docs/c.md)
 * [d.CPU内部组成](docs/d.md)
 * [e.左值和右值的区别](docs/e.md)
+* [e.个人理解的C语言](docs/f.md)
