@@ -80,7 +80,13 @@ void print_item(link p) {
     printf("%d\n", p->item);
 }
 
+#ifndef TEST1
+#define TEST1 1
+#endif
+
 int main(void) {
+    printf("%d\n", TEST1);
+
     link p = make_node(10);
     insert(p);
     p = make_node(5);

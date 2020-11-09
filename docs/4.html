@@ -818,6 +818,33 @@ main(void)
 <h4 id="&#x7B2C;-26-&#x7AE0;-&#x94FE;&#x8868;&#x3001;&#x4E8C;&#x53C9;&#x6811;&#x548C;&#x54C8;&#x5E0C;&#x8868;">&#x7B2C; 26 &#x7AE0; &#x94FE;&#x8868;&#x3001;&#x4E8C;&#x53C9;&#x6811;&#x548C;&#x54C8;&#x5E0C;&#x8868;</h4>
 <ol>
 <li>&#x6570;&#x7EC4;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x662F;&#x8FDE;&#x7EED;&#x5B58;&#x653E;&#x7684;&#xFF0C;&#x800C;&#x94FE;&#x8868;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x7684;&#x5E03;&#x5C40;&#x662F;&#x4E0D;&#x89C4;&#x5219;&#x7684;</li>
+<li>&#x6392;&#x5E8F;&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x4E2D;&#x5E8F;&#x904D;&#x5386;&#x7ED3;&#x679C;&#x662F;&#x4ECE;&#x5C0F;&#x5230;&#x5927;&#x6392;&#x5217;&#x7684;</li>
+<li>gcc&#x7684;&#x547D;&#x4EE4;&#x53C2;&#x6570;&#xFF1A;<ul>
+<li>-c &#x7F16;&#x8BD1;&#x751F;&#x6210;&#x76EE;&#x6807;&#x6587;&#x4EF6;&#xFF1A;gcc -c main.c</li>
+<li>-D &#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x5B8F;&#xFF1A;gcc -DTEST1=2</li>
+<li>-E &#x53EA;&#x505A;&#x9884;&#x5904;&#x7406;&#x800C;&#x4E0D;&#x7F16;&#x8BD1;</li>
+<li>-g &#x5728;&#x751F;&#x6210;&#x7684;&#x76EE;&#x6807;&#x6587;&#x4EF6;&#x4E2D;&#x6DFB;&#x52A0;&#x8C03;&#x8BD5;&#x4FE1;&#x606F;&#xFF0C;&#x5728;gdb&#x8C03;&#x8BD5;&#x548C;objdump&#x53CD;&#x6C47;&#x7F16;&#x65F6;&#x8981;&#x7528;</li>
+<li>-Idir dir&#x662F;&#x5934;&#x6587;&#x4EF6;&#x6240;&#x5728;&#x7684;&#x76EE;&#x5F55;</li>
+<li>-Ldir dir&#x662F;&#x5E93;&#x6587;&#x4EF6;&#x6240;&#x5728;&#x7684;&#x76EE;&#x5F55;</li>
+<li>-M&#x548C;-MM &#x8F93;&#x51FA;.o&#x6587;&#x4EF6;&#x3001;.c&#x6587;&#x4EF6;&#x3001;.h&#x6587;&#x4EF6;&#x8FD9;&#x79CD;&#x5F62;&#x5F0F;&#x7684;Makefile&#x89C4;&#x5219;</li>
+<li>-o outfile outfile&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x7684;&#x6587;&#x4EF6;&#x540D;</li>
+<li>-print-search-dirs &#x6253;&#x5370;&#x5E93;&#x6587;&#x4EF6;&#x7684;&#x9ED8;&#x8BA4;&#x641C;&#x7D22;&#x8DEF;&#x5F84;</li>
+<li>-S &#x7F16;&#x8BD1;&#x751F;&#x6210;&#x6C47;&#x7F16;&#x4EE3;&#x7801;</li>
+<li>-v &#x6253;&#x5370;&#x8BE6;&#x7EC6;&#x7684;&#x7F16;&#x8BD1;&#x94FE;&#x63A5;&#x8FC7;&#x7A0B;</li>
+<li>-Wall &#x6253;&#x5370;&#x6240;&#x6709;&#x7684;&#x8B66;&#x544A;&#x4FE1;&#x606F;</li>
+</ul>
+</li>
+<li>gdb&#x547D;&#x4EE4;</li>
+<li>&#x5176;&#x5B83;&#x5F00;&#x53D1;&#x8C03;&#x8BD5;&#x5DE5;&#x5177;&#xFF1A;<ul>
+<li>as&#xFF0C;&#x6C47;&#x7F16;&#x5668;&#xFF1A;as hello.s -o hello.o</li>
+<li>ld&#xFF0C;&#x94FE;&#x63A5;&#x5668;&#xFF1A;ld hello.o -o hello</li>
+<li>readelf&#xFF0C;&#x8BFB;ELF&#x6587;&#x4EF6;&#x4FE1;&#x606F;</li>
+<li>objdump&#xFF0C;&#x663E;&#x793A;&#x76EE;&#x6807;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x4FE1;&#x606F;&#xFF1A;objdump -d hello.o</li>
+<li>hexdump&#xFF0C;&#x4EE5;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x6216;ASCII&#x7801;&#x663E;&#x793A;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#xFF1A;hexdump -C hello.o</li>
+<li>&#x751F;&#x6210;&#x9759;&#x6001;&#x5E93;&#xFF1A;ar rs libhello.a hello.o</li>
+<li>&#x751F;&#x6210;&#x5171;&#x4EAB;&#x5E93;&#xFF1A;&#x5148;gcc -c -fPIC hello.c&#xFF0C;&#x518D;gcc -shared -o libhello.so hello.o</li>
+</ul>
+</li>
 </ol>
 
                                 
@@ -862,7 +889,7 @@ main(void)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"4.C语言本质","level":"1.5","depth":1,"next":{"title":"a.CPU指令的执行","level":"1.6","depth":1,"path":"docs/a.md","ref":"docs/a.md","articles":[]},"previous":{"title":"3.C语言入门","level":"1.4","depth":1,"path":"docs/3.md","ref":"docs/3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/4.md","mtime":"2020-11-09T03:19:55.756Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-09T03:20:29.460Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"4.C语言本质","level":"1.5","depth":1,"next":{"title":"a.CPU指令的执行","level":"1.6","depth":1,"path":"docs/a.md","ref":"docs/a.md","articles":[]},"previous":{"title":"3.C语言入门","level":"1.4","depth":1,"path":"docs/3.md","ref":"docs/3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/4.md","mtime":"2020-11-09T07:10:37.241Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-09T07:11:06.773Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
