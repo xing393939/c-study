@@ -7,7 +7,7 @@
 * [3.C语言入门](docs/3.md)
 * [4.C语言本质](docs/4.md)
 * [5.Linux系统编程](docs/5.md)
-* 杂项
+* 6.杂项
   * [a.CPU指令的执行](docs/a.md)
   * [b.printf函数规定符](docs/b.md)
   * [c.基本数据类型所占内存大小](docs/c.md)
