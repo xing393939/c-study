@@ -416,6 +416,62 @@
 </ul>
 </li>
 </ol>
+<h4 id="&#x7B2C;-31-&#x7AE0;-shell&#x811A;&#x672C;">&#x7B2C; 31 &#x7AE0; Shell&#x811A;&#x672C;</h4>
+<ol>
+<li>Shell&#x7684;&#x5386;&#x53F2;<ul>
+<li>sh&#xFF08;Bourne Shell&#xFF09;&#xFF1A;&#x7531;Steve Bourne&#x5F00;&#x53D1;</li>
+<li>bash&#xFF08;Bourne Again Shell&#xFF09;&#xFF1A;&#x7531;GNU&#x5F00;&#x53D1;&#x7684;Shell&#xFF0C;&#x4E3B;&#x8981;&#x76EE;&#x6807;&#x662F;&#x4E0E;POSIX&#x6807;&#x51C6;&#x4FDD;&#x6301;&#x4E00;&#x81F4;&#xFF0C;&#x540C;&#x65F6;&#x517C;&#x987E;&#x5BF9;sh&#x7684;&#x517C;&#x5BB9;</li>
+<li>dash&#xFF1A;&#xFF08;ubuntu16.04&#x4E0A;&#xFF0C;bash&#x5927;&#x6982;1M&#xFF0C;dash&#x53EA;&#x6709;150K&#xFF09;&#xFF0C;&#x7B26;&#x5408;POSIX&#x6807;&#x51C6;&#x3002;Ubuntu 6.10&#x5F00;&#x59CB;&#x9ED8;&#x8BA4;&#x662F;Dash&#x3002;</li>
+</ul>
+</li>
+<li>Shell&#x6267;&#x884C;&#x4EA4;&#x4E92;&#x5F0F;&#x547D;&#x4EE4;&#xFF1A;<ul>
+<li>&#x5185;&#x5EFA;&#x547D;&#x4EE4;&#xFF1A;&#x76F8;&#x5F53;&#x4E8E;&#x8C03;&#x7528;Shell&#x8FDB;&#x7A0B;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x5982;cd&#x3001;alias&#x3001;umask&#x3001;exit</li>
+<li>&#x975E;&#x5185;&#x5EFA;&#x547D;&#x4EE4;&#xFF1A;Shell&#x4F1A;fork&#x5E76;exec&#x8BE5;&#x547D;&#x4EE4;<ol>
+<li>&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;(&#x6709;&#x4EE3;&#x7801;&#x6BB5;&#x548C;_start&#x51FD;&#x6570;)&#xFF0C;&#x76F4;&#x63A5;&#x6267;&#x884C;</li>
+<li>&#x6587;&#x672C;&#x6587;&#x4EF6;&#xFF0C;&#x7B2C;&#x4E00;&#x884C;&#x5F00;&#x5934;&#x662F;#! /bin/sh&#xFF0C;&#x5C31;&#x7528;&#x6307;&#x5B9A;&#x7684;&#x89E3;&#x91CA;&#x5668;/bin/sh&#x89E3;&#x91CA;&#x6267;&#x884C;</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>Shell&#x6709;&#x4E24;&#x79CD;&#x53D8;&#x91CF;&#xFF1A;<ul>
+<li>&#x672C;&#x5730;&#x53D8;&#x91CF;&#xFF1A;VARNAME=value&#xFF0C;&#x53EA;&#x5B58;&#x5728;&#x4E8E;&#x5F53;&#x524D;Shell&#x8FDB;&#x7A0B;</li>
+<li>&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF1A;export VARNAME=value&#xFF0C;Shell&#x7684;&#x4EFB;&#x4F55;&#x8FDB;&#x7A0B;</li>
+<li>source somefile&#x8868;&#x793A;&#x8BFB;&#x53D6;somefile&#x7684;&#x547D;&#x4EE4;&#x5E76;&#x6267;&#x884C;&#xFF0C;source&#x53EF;&#x4EE5;&#x7528;.&#x4EE3;&#x66FF;</li>
+</ul>
+</li>
+<li>&#x547D;&#x4EE4;&#x4EE3;&#x6362;&#xFF1A;DATE=`date`&#x7B49;&#x4EF7;&#x4E8E;DATE=$(date)</li>
+<li>&#x4EA4;&#x4E92;&#x767B;&#x5F55;Shell&#x4F1A;&#x81EA;&#x52A8;&#x6267;&#x884C;&#x7684;&#x811A;&#x672C;(&#x4ECE;&#x5B57;&#x7B26;&#x7EC8;&#x7AEF;&#x767B;&#x5F55;&#x6216;&#x8005;&#x7528;telnet/ssh&#x4ECE;&#x8FDC;&#x7A0B;&#x767B;&#x5F55;)&#xFF1A;<ul>
+<li>/etc/profile&#xFF0C;&#x7CFB;&#x7EDF;&#x4E2D;&#x6BCF;&#x4E2A;&#x7528;&#x6237;&#x767B;&#x5F55;&#x65F6;&#x90FD;&#x8981;&#x6267;&#x884C;&#x8FD9;&#x4E2A;&#x811A;&#x672C;</li>
+<li>~/.bash_profile&#xFF0C;&#x767B;&#x5F55;&#x7528;&#x6237;&#x6267;&#x884C;&#xFF0C;bash&#x811A;&#x672C;&#x5148;&#x67E5;&#x627E;&#x8FD9;&#x4E2A;</li>
+<li>~/.bash_login&#xFF0C;&#x767B;&#x5F55;&#x7528;&#x6237;&#x6267;&#x884C;</li>
+<li>~/.profile&#xFF0C;&#xFF0C;&#x767B;&#x5F55;&#x7528;&#x6237;&#x6267;&#x884C;&#xFF0C;bash&#x811A;&#x672C;&#x4E3A;&#x4E86;&#x517C;&#x5BB9;sh&#x811A;&#x672C;&#x505A;&#x7684;</li>
+<li>~/.bash_logout&#xFF0C;&#x9000;&#x51FA;&#x767B;&#x5F55;&#x65F6;&#x6267;&#x884C;</li>
+</ul>
+</li>
+<li>&#x4EA4;&#x4E92;&#x975E;&#x767B;&#x5F55;Shell(GUI&#x754C;&#x9762;&#x4E0B;&#x5F00;&#x7EC8;&#x7AEF;&#xFF0C;&#x6216;&#x8005;&#x5728;&#x767B;&#x5F55;Shell&#x4E0B;&#x8F93;&#x5165;bash&#x547D;&#x4EE4;)&#xFF1A;&#x4F1A;&#x81EA;&#x52A8;&#x6267;&#x884C;~/.bashrc</li>
+<li>Shell&#x811A;&#x672C;&#x8BED;&#x6CD5;<ul>
+<li>[ -d DIR ]    &#x5982;&#x679C;DIR&#x5B58;&#x5728;&#x5E76;&#x4E14;&#x662F;&#x4E00;&#x4E2A;&#x76EE;&#x5F55;&#x5219;&#x4E3A;&#x771F;</li>
+<li>[ -f FILE ]    &#x5982;&#x679C;FILE&#x5B58;&#x5728;&#x4E14;&#x662F;&#x4E00;&#x4E2A;&#x666E;&#x901A;&#x6587;&#x4EF6;&#x5219;&#x4E3A;&#x771F;</li>
+<li>[ -z STRING ]    &#x5982;&#x679C;STRING&#x7684;&#x957F;&#x5EA6;&#x4E3A;&#x96F6;&#x5219;&#x4E3A;&#x771F;</li>
+<li>[ -n STRING ]    &#x5982;&#x679C;STRING&#x7684;&#x957F;&#x5EA6;&#x975E;&#x96F6;&#x5219;&#x4E3A;&#x771F;</li>
+<li>[ STRING1 = STRING2 ]    &#x5982;&#x679C;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x76F8;&#x540C;&#x5219;&#x4E3A;&#x771F;</li>
+<li>[ STRING1 != STRING2 ]    &#x5982;&#x679C;&#x5B57;&#x7B26;&#x4E32;&#x4E0D;&#x76F8;&#x540C;&#x5219;&#x4E3A;&#x771F;</li>
+<li>[ ARG1 -eq ARG2 ]    ARG1&#x548C;ARG2&#x5E94;&#x8BE5;&#x662F;&#x6574;&#x6570;&#x5E76;&#x4E14;&#x76F8;&#x7B49;</li>
+<li>-a&#x8868;&#x793A;&amp;&amp;</li>
+<li>-o&#x8868;&#x793A;||</li>
+<li>$0&#x3001;$1&#x3001;$2    &#x76F8;&#x5F53;&#x4E8E;C&#x8BED;&#x8A00;main&#x51FD;&#x6570;&#x7684;argv[0]&#x3001;argv[1]&#x3001;argv[2]...</li>
+<li>$@    &#x8868;&#x793A;&#x53C2;&#x6570;&#x5217;&#x8868;&quot;$1&quot; &quot;$2&quot; ...&#xFF0C;&#x4F8B;&#x5982;&#x53EF;&#x4EE5;&#x7528;&#x5728;for&#x5FAA;&#x73AF;&#x4E2D;&#x7684;in&#x540E;&#x9762;&#x3002;</li>
+<li>$?    &#x4E0A;&#x4E00;&#x6761;&#x547D;&#x4EE4;&#x7684;Exit Status</li>
+<li>$$    &#x5F53;&#x524D;Shell&#x7684;&#x8FDB;&#x7A0B;&#x53F7;</li>
+</ul>
+</li>
+<li>Shell&#x811A;&#x672C;&#x7684;&#x8C03;&#x8BD5;&#x65B9;&#x6CD5;<ul>
+<li>-n &#x8BFB;&#x4E00;&#x904D;&#x811A;&#x672C;&#x4E2D;&#x7684;&#x547D;&#x4EE4;&#x4F46;&#x4E0D;&#x6267;&#x884C;&#xFF0C;&#x7528;&#x4E8E;&#x68C0;&#x67E5;&#x811A;&#x672C;&#x4E2D;&#x7684;&#x8BED;&#x6CD5;&#x9519;&#x8BEF;</li>
+<li>-v &#x4E00;&#x8FB9;&#x6267;&#x884C;&#x811A;&#x672C;&#xFF0C;&#x4E00;&#x8FB9;&#x5C06;&#x6267;&#x884C;&#x8FC7;&#x7684;&#x811A;&#x672C;&#x547D;&#x4EE4;&#x6253;&#x5370;&#x5230;&#x6807;&#x51C6;&#x9519;&#x8BEF;&#x8F93;&#x51FA;</li>
+<li>-x &#x63D0;&#x4F9B;&#x8DDF;&#x8E2A;&#x6267;&#x884C;&#x4FE1;&#x606F;&#xFF0C;&#x5C06;&#x6267;&#x884C;&#x7684;&#x6BCF;&#x4E00;&#x6761;&#x547D;&#x4EE4;&#x548C;&#x7ED3;&#x679C;&#x4F9D;&#x6B21;&#x6253;&#x5370;&#x51FA;&#x6765;</li>
+</ul>
+</li>
+</ol>
 
                                 
                                 </section>
@@ -455,7 +511,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"5.Linux系统编程","level":"1.6","depth":1,"next":{"title":"6.杂项","level":"1.7","depth":1,"ref":"","articles":[{"title":"a.CPU指令的执行","level":"1.7.1","depth":2,"path":"docs/a.md","ref":"docs/a.md","articles":[]},{"title":"b.printf函数规定符","level":"1.7.2","depth":2,"path":"docs/b.md","ref":"docs/b.md","articles":[]},{"title":"c.基本数据类型所占内存大小","level":"1.7.3","depth":2,"path":"docs/c.md","ref":"docs/c.md","articles":[]},{"title":"d.CPU内部组成","level":"1.7.4","depth":2,"path":"docs/d.md","ref":"docs/d.md","articles":[]},{"title":"e.左值和右值的区别","level":"1.7.5","depth":2,"path":"docs/e.md","ref":"docs/e.md","articles":[]},{"title":"e.个人理解的C语言","level":"1.7.6","depth":2,"path":"docs/f.md","ref":"docs/f.md","articles":[]}]},"previous":{"title":"4.C语言本质","level":"1.5","depth":1,"path":"docs/4.md","ref":"docs/4.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/5.md","mtime":"2020-11-12T10:03:07.664Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-12T10:03:34.965Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"5.Linux系统编程","level":"1.6","depth":1,"next":{"title":"6.杂项","level":"1.7","depth":1,"ref":"","articles":[{"title":"a.CPU指令的执行","level":"1.7.1","depth":2,"path":"docs/a.md","ref":"docs/a.md","articles":[]},{"title":"b.printf函数规定符","level":"1.7.2","depth":2,"path":"docs/b.md","ref":"docs/b.md","articles":[]},{"title":"c.基本数据类型所占内存大小","level":"1.7.3","depth":2,"path":"docs/c.md","ref":"docs/c.md","articles":[]},{"title":"d.CPU内部组成","level":"1.7.4","depth":2,"path":"docs/d.md","ref":"docs/d.md","articles":[]},{"title":"e.左值和右值的区别","level":"1.7.5","depth":2,"path":"docs/e.md","ref":"docs/e.md","articles":[]},{"title":"e.个人理解的C语言","level":"1.7.6","depth":2,"path":"docs/f.md","ref":"docs/f.md","articles":[]}]},"previous":{"title":"4.C语言本质","level":"1.5","depth":1,"path":"docs/4.md","ref":"docs/4.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/5.md","mtime":"2020-11-13T04:01:45.495Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-13T04:02:10.504Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
