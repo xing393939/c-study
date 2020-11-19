@@ -651,6 +651,63 @@
 <li>kill -9 &#x8FDB;&#x7A0B;&#x53F7;&#xFF1A;&#x4FE1;&#x53F7;&#x662F;SIGKILL&#xFF0C;&#x65E2;&#x4E0D;&#x80FD;&#x88AB;&#x963B;&#x585E;&#x4E5F;&#x4E0D;&#x80FD;&#x88AB;&#x5FFD;&#x7565;&#xFF0C;&#x4E5F;&#x4E0D;&#x80FD;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x51FD;&#x6570;&#x6355;&#x6349;</li>
 </ul>
 </li>
+<li>pid_t setsid(void); &#x521B;&#x5EFA;&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;&#xFF0C;&#x6210;&#x529F;&#x8FD4;&#x56DE;&#x65B0;&#x521B;&#x5EFA;&#x7684;Session&#x7684;id(&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;id)&#xFF0C;&#x51FA;&#x9519;&#x8FD4;&#x56DE;-1<ul>
+<li>&#x6CE8;&#x610F;&#xFF1A;&#x8C03;&#x7528;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x4E4B;&#x524D;&#xFF0C;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x4E0D;&#x5141;&#x8BB8;&#x662F;&#x8FDB;&#x7A0B;&#x7EC4;&#x7684;Leader&#xFF0C;&#x5426;&#x5219;&#x8BE5;&#x51FD;&#x6570;&#x8FD4;&#x56DE;-1</li>
+<li>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;Session&#xFF0C;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x6210;&#x4E3A;Session Leader&#xFF0C;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x7684;id&#x5C31;&#x662F;Session&#x7684;id&#x3002;</li>
+<li>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x8FDB;&#x7A0B;&#x7EC4;&#xFF0C;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x6210;&#x4E3A;&#x8FDB;&#x7A0B;&#x7EC4;&#x7684;Leader&#xFF0C;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x7684;id&#x5C31;&#x662F;&#x8FDB;&#x7A0B;&#x7EC4;&#x7684;id&#x3002;</li>
+<li>&#x5982;&#x679C;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x539F;&#x672C;&#x6709;&#x4E00;&#x4E2A;&#x63A7;&#x5236;&#x7EC8;&#x7AEF;&#xFF0C;&#x5219;&#x5B83;&#x5931;&#x53BB;&#x8FD9;&#x4E2A;&#x63A7;&#x5236;&#x7EC8;&#x7AEF;&#xFF0C;&#x6210;&#x4E3A;&#x4E00;&#x4E2A;&#x6CA1;&#x6709;&#x63A7;&#x5236;&#x7EC8;&#x7AEF;&#x7684;&#x8FDB;&#x7A0B;</li>
+</ul>
+</li>
+</ol>
+<h4 id="&#x7B2C;-35-&#x7AE0;-&#x7EBF;&#x7A0B;">&#x7B2C; 35 &#x7AE0; &#x7EBF;&#x7A0B;</h4>
+<ol>
+<li>&#x7EBF;&#x7A0B;&#x7684;&#x6982;&#x5FF5;&#xFF1A;main&#x51FD;&#x6570;&#x548C;&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x51FD;&#x6570;&#x662F;&#x540C;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#x5730;&#x5740;&#x7A7A;&#x95F4;&#x4E2D;&#x7684;&#x591A;&#x4E2A;&#x63A7;&#x5236;&#x6D41;&#x7A0B;&#xFF0C;&#x591A;&#x7EBF;&#x7A0B;&#x4E5F;&#x662F;&#x5982;&#x6B64;&#x3002;&#x7EBF;&#x7A0B;&#x5171;&#x4EAB;&#x7684;&#x5730;&#x65B9;&#xFF1A;<ul>
+<li>&#x540C;&#x4E00;&#x8FDB;&#x7A0B;&#x7684;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x5171;&#x4EAB;&#x540C;&#x4E00;&#x5730;&#x5740;&#x7A7A;&#x95F4;&#xFF0C;&#x56E0;&#x6B64;Text Segment&#x3001;Data Segment&#x90FD;&#x662F;&#x5171;&#x4EAB;&#x7684;&#xFF0C;&#x5171;&#x4EAB;&#x5168;&#x5C40;&#x51FD;&#x6570;&#x548C;&#x5168;&#x5C40;&#x53D8;&#x91CF;</li>
+<li>&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;&#x8868;</li>
+<li>&#x6BCF;&#x79CD;&#x4FE1;&#x53F7;&#x7684;&#x5904;&#x7406;&#x65B9;&#x5F0F;&#xFF08;SIG_IGN&#x3001;SIG_DFL&#x6216;&#x8005;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x51FD;&#x6570;&#xFF09;</li>
+<li>&#x5F53;&#x524D;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;</li>
+<li>&#x7528;&#x6237;id&#x548C;&#x7EC4;id</li>
+</ul>
+</li>
+<li>&#x7EBF;&#x7A0B;&#x4E0D;&#x5171;&#x4EAB;&#x7684;&#xFF1A;<ul>
+<li>&#x7EBF;&#x7A0B;id</li>
+<li>&#x4E0A;&#x4E0B;&#x6587;&#xFF0C;&#x5305;&#x62EC;&#x5404;&#x79CD;&#x5BC4;&#x5B58;&#x5668;&#x7684;&#x503C;&#x3001;&#x7A0B;&#x5E8F;&#x8BA1;&#x6570;&#x5668;&#x548C;&#x6808;&#x6307;&#x9488;</li>
+<li>&#x6808;&#x7A7A;&#x95F4;</li>
+<li>errno&#x53D8;&#x91CF;</li>
+<li>&#x4FE1;&#x53F7;&#x5C4F;&#x853D;&#x5B57;</li>
+<li>&#x8C03;&#x5EA6;&#x4F18;&#x5148;&#x7EA7;</li>
+</ul>
+</li>
+<li>POSIX&#x6807;&#x51C6;&#x5B9A;&#x4E49;&#x7684;&#x7EBF;&#x7A0B;&#x5E93;&#x51FD;&#x6570;&#x79F0;&#x4E3A;POSIX thread&#x6216;&#x8005;pthread&#x3002;&#x5728;Linux&#x4E0A;&#x7EBF;&#x7A0B;&#x51FD;&#x6570;&#x4F4D;&#x4E8E;libpthread&#x5171;&#x4EAB;&#x5E93;&#x4E2D;&#xFF0C;&#x7F16;&#x8BD1;&#x65F6;&#x8981;&#x52A0;&#x4E0A;-lpthread&#x9009;&#x9879;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x8C03;&#x7528;&#x4E86;exit&#x6216;_exit&#xFF0C;&#x5219;&#x6574;&#x4E2A;&#x8FDB;&#x7A0B;&#x7684;&#x6240;&#x6709;&#x7EBF;&#x7A0B;&#x90FD;&#x7EC8;&#x6B62;&#x3002;main&#x51FD;&#x6570;return&#x4E5F;&#x76F8;&#x5F53;&#x4E8E;&#x8C03;&#x7528;exit</li>
+<li>&#x7EC8;&#x6B62;&#x7EBF;&#x7A0B;&#x7684;&#x4E09;&#x4E2A;&#x65B9;&#x6CD5;&#xFF1A;<ul>
+<li>&#x4ECE;&#x7EBF;&#x7A0B;&#x51FD;&#x6570;return&#x3002;&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x5BF9;&#x4E3B;&#x7EBF;&#x7A0B;&#x4E0D;&#x9002;&#x7528;&#xFF0C;&#x4ECE;main&#x51FD;&#x6570;return&#x76F8;&#x5F53;&#x4E8E;&#x8C03;&#x7528;exit&#x3002;</li>
+<li>&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x53EF;&#x4EE5;&#x8C03;&#x7528;pthread_cancel&#x7EC8;&#x6B62;&#x540C;&#x4E00;&#x8FDB;&#x7A0B;&#x4E2D;&#x7684;&#x53E6;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x3002;</li>
+<li>&#x7EBF;&#x7A0B;&#x53EF;&#x4EE5;&#x8C03;&#x7528;pthread_exit&#x7EC8;&#x6B62;&#x81EA;&#x5DF1;&#x3002;</li>
+</ul>
+</li>
+<li>&#x4E92;&#x65A5;&#x9501;&#xFF08;Mutex&#xFF0C;Mutual Exclusive Lock&#xFF09;<ul>
+<li>pthread_mutex_t counter_mutex = PTHREAD_MUTEX_INITIALIZER; &#x521D;&#x59CB;&#x5316;&#x9501;</li>
+<li>int pthread_mutex_lock(pthread_mutex_t *mutex); &#x52A0;&#x9501;&#xFF0C;&#x5982;&#x679C;&#x83B7;&#x53D6;&#x5931;&#x8D25;&#x4F1A;&#x6302;&#x8D77;&#x7B49;&#x5F85;</li>
+<li>int pthread_mutex_unlock(pthread_mutex_t *mutex); &#x89E3;&#x9501;</li>
+<li>int pthread_mutex_trylock(pthread_mutex_t *mutex); &#x5C1D;&#x8BD5;&#x83B7;&#x53D6;&#x9501;&#xFF0C;&#x5982;&#x679C;&#x83B7;&#x53D6;&#x5931;&#x8D25;&#x7ACB;&#x5373;&#x8FD4;&#x56DE;&#x5931;&#x8D25;</li>
+</ul>
+</li>
+<li>&#x4FE1;&#x53F7;&#x91CF;&#xFF08;Semaphore&#xFF09;<ul>
+<li>int sem_init(sem_t *sem, int pshared, unsigned int value); &#x521D;&#x59CB;&#x5316;&#xFF0C;pshared=0&#x8868;&#x793A;&#x7EBF;&#x7A0B;&#x95F4;&#x540C;&#x6B65;&#xFF0C;value&#x8868;&#x793A;&#x8D44;&#x6E90;&#x4E2A;&#x6570;</li>
+<li>int sem_wait(sem_t *sem); &#x52A0;&#x9501;&#xFF0C;&#x5982;&#x679C;&#x8D44;&#x6E90;&#x4E2A;&#x6570;=0&#x5C31;&#x6302;&#x8D77;&#x7B49;&#x5F85;</li>
+<li>int sem_post(sem_t * sem); &#x89E3;&#x9501;&#xFF0C;&#x91CA;&#x653E;&#x8D44;&#x6E90;</li>
+<li>int sem_trywait(sem_t *sem); &#x5C1D;&#x8BD5;&#x83B7;&#x53D6;&#x9501;&#xFF0C;&#x5982;&#x679C;&#x83B7;&#x53D6;&#x5931;&#x8D25;&#x7ACB;&#x5373;&#x8FD4;&#x56DE;&#x5931;&#x8D25;</li>
+<li>int sem_destroy(sem_t * sem); &#x9500;&#x6BC1;</li>
+</ul>
+</li>
+<li>&#x54F2;&#x5B66;&#x5BB6;&#x5C31;&#x9910;&#x95EE;&#x9898;&#xFF1A;5&#x4E2A;&#x54F2;&#x5B66;&#x5BB6;&#x3001;5&#x6839;&#x7B77;&#x5B50;&#xFF0C;&#x6BCF;&#x6B21;&#x5403;&#x996D;&#x5148;&#x62FF;1&#x6839;&#x7B77;&#x5B50;&#x518D;&#x62FF;&#x5230;&#x53E6;&#x5916;1&#x6839;&#x7B77;&#x5B50;&#x624D;&#x80FD;&#x5403;&#x996D;&#xFF0C;&#x5982;&#x679C;5&#x4E2A;&#x4EBA;&#x540C;&#x65F6;&#x62FF;&#x4E86;1&#x6839;&#x7B77;&#x5B50;&#x5C31;&#x51FA;&#x73B0;&#x6B7B;&#x9501;&#xFF1A;<ul>
+<li>&#x89E3;&#x6CD5;1&#xFF1A;&#x5F53;&#x62FF;&#x5230;1&#x6839;&#x7B77;&#x5B50;&#x7B49;&#x5F85;30&#x79D2;&#x540E;&#x653E;&#x4E0B;&#x3002;&#x7F3A;&#x70B9;&#x662F;&#x4F1A;&#x51FA;&#x73B0;&#x6D3B;&#x9501;</li>
+<li>&#x89E3;&#x6CD5;2&#xFF1A;&#x670D;&#x52A1;&#x5458;&#x89E3;&#x6CD5;&#xFF0C;&#x8BA9;&#x670D;&#x52A1;&#x5458;&#x6765;&#x534F;&#x8C03;</li>
+<li>&#x89E3;&#x6CD5;3&#xFF1A;&#x7ED9;&#x7B77;&#x5B50;&#x7F16;&#x53F7;12345&#xFF0C;&#x62FF;&#x7B77;&#x5B50;&#x5FC5;&#x987B;&#x4ECE;&#x5C0F;&#x5230;&#x5927;&#x62FF;&#xFF0C;&#x653E;&#x7B77;&#x5B50;&#x5FC5;&#x987B;&#x4ECE;&#x5927;&#x5230;&#x5C0F;&#x653E;&#x3002;&#x7F3A;&#x70B9;&#x662F;&#x6548;&#x7387;&#x4F4E;</li>
+<li>&#x89E3;&#x6CD5;4&#xFF1A;&#x628A;&#x7B77;&#x5B50;&#x6210;&#x53CC;&#x7EC4;&#x5408;&#x6210;&#x4E00;&#x4E2A;&#x539F;&#x5B50;&#x8D44;&#x6E90;&#xFF0C;&#x7136;&#x540E;&#x5206;&#x914D;&#x3002;</li>
+</ul>
+</li>
 </ol>
 
                                 
@@ -691,7 +748,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"5.Linux系统编程","level":"1.6","depth":1,"next":{"title":"6.杂项","level":"1.7","depth":1,"ref":"","articles":[{"title":"a.CPU指令的执行","level":"1.7.1","depth":2,"path":"docs/a.md","ref":"docs/a.md","articles":[]},{"title":"b.printf函数规定符","level":"1.7.2","depth":2,"path":"docs/b.md","ref":"docs/b.md","articles":[]},{"title":"c.基本数据类型所占内存大小","level":"1.7.3","depth":2,"path":"docs/c.md","ref":"docs/c.md","articles":[]},{"title":"d.CPU内部组成","level":"1.7.4","depth":2,"path":"docs/d.md","ref":"docs/d.md","articles":[]},{"title":"e.左值和右值的区别","level":"1.7.5","depth":2,"path":"docs/e.md","ref":"docs/e.md","articles":[]},{"title":"f.个人理解的C语言","level":"1.7.6","depth":2,"path":"docs/f.md","ref":"docs/f.md","articles":[]}]},"previous":{"title":"4.C语言本质","level":"1.5","depth":1,"path":"docs/4.md","ref":"docs/4.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/5.md","mtime":"2020-11-18T07:45:31.731Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-18T07:45:58.894Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"5.Linux系统编程","level":"1.6","depth":1,"next":{"title":"6.杂项","level":"1.7","depth":1,"ref":"","articles":[{"title":"a.CPU指令的执行","level":"1.7.1","depth":2,"path":"docs/a.md","ref":"docs/a.md","articles":[]},{"title":"b.printf函数规定符","level":"1.7.2","depth":2,"path":"docs/b.md","ref":"docs/b.md","articles":[]},{"title":"c.基本数据类型所占内存大小","level":"1.7.3","depth":2,"path":"docs/c.md","ref":"docs/c.md","articles":[]},{"title":"d.CPU内部组成","level":"1.7.4","depth":2,"path":"docs/d.md","ref":"docs/d.md","articles":[]},{"title":"e.左值和右值的区别","level":"1.7.5","depth":2,"path":"docs/e.md","ref":"docs/e.md","articles":[]},{"title":"f.个人理解的C语言","level":"1.7.6","depth":2,"path":"docs/f.md","ref":"docs/f.md","articles":[]}]},"previous":{"title":"4.C语言本质","level":"1.5","depth":1,"path":"docs/4.md","ref":"docs/4.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/5.md","mtime":"2020-11-19T04:00:31.328Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-19T04:00:54.191Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
