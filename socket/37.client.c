@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <arpa/inet.h>
-#include <strings.h>
+#include <string.h>
 #include "myfunc/wrap.h"
 
 #define MAXLINE 80
@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
     Connect(sockfd, (struct sockaddr *)&servaddr, sizeof(servaddr));
 
     while (fgets(buf, MAXLINE, stdin) != NULL) {
-        Write(sockfd, buf, MAXLINE);
+        Write(sockfd, buf, strlen(buf));
         n = Read(sockfd, buf, MAXLINE);
         if (n == 0)
             printf("the other side has been closed.\n");

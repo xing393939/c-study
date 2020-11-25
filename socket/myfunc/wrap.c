@@ -1,7 +1,6 @@
 #include <stdlib.h>
 #include <errno.h>
 #include <sys/socket.h>
-#include <netinet/in.h>
 #include <unistd.h>
 #include <stdio.h>
 
@@ -158,27 +157,4 @@ ssize_t Write(int fd, const void *ptr, size_t nbytes) {
 void Close(int fd) {
     if (close(fd) == -1)
         perr_exit("close error");
-}
-
-/**
- * power - Calculate the power of number.
- * @param base:	Base value.
- * @param exponent: Exponent value.
- *
- * @return base raised to the power exponent.
- */
-double power(double base, int exponent)
-{
-    int result = base;
-    int i;
-
-    if (exponent == 0) {
-        return 1;
-    }
-    
-    for(i = 1; i < exponent; ++i){
-        result = result * base;
-    }
-
-    return result;
 }

@@ -3,9 +3,6 @@
 #ifndef POWER_H
 #define POWER_H
 
-extern double power(double base, int exponent);
-static ssize_t my_read(int fd, char *ptr);
-
 ssize_t Readline(int fd, void *vptr, size_t maxlen);
 
 ssize_t Readn(int fd, void *vptr, size_t n);
