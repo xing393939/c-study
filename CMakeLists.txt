@@ -1,3 +1,4 @@
+# https://www.hahack.com/codes/cmake/
 cmake_minimum_required(VERSION 3.10)
 project(untitled)
 
@@ -37,3 +38,7 @@ add_executable(35.2 easy/35.2.cpp)
 TARGET_LINK_LIBRARIES(35.2 pthread)
 add_executable(35.3 easy/35.3.cpp)
 TARGET_LINK_LIBRARIES(35.3 pthread)
+
+add_subdirectory(socket/myfunc)
+add_executable(37.client socket/37.client.c)
+target_link_libraries(37.client MathFunctions)
