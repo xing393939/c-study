@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
 {
     char name[] = "unix.socket";
     char buf[MAXLINE];
-    int sockfd = cli_conn(&name);
+    int sockfd = cli_conn(name);
     if (sockfd <= 0)
         perror("listen failed");
 
