@@ -39,6 +39,12 @@ TARGET_LINK_LIBRARIES(35.2 pthread)
 add_executable(35.3 easy/35.3.cpp)
 TARGET_LINK_LIBRARIES(35.3 pthread)
 
+add_subdirectory(unix_socket/myfunc)
+add_executable(unix.client unix_socket/unix.client.c)
+target_link_libraries(unix.client MyFunc)
+add_executable(unix.server unix_socket/unix.server.c)
+target_link_libraries(unix.server MyFunc)
+
 add_subdirectory(socket/myfunc)
 add_executable(37.client socket/37.client.c)
 target_link_libraries(37.client MathFunctions)
