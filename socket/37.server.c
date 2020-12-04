@@ -32,8 +32,7 @@ int main(void)
     printf("Accepting connections ...\n");
     while (1) {
         cliaddr_len = sizeof(cliaddr);
-        connfd = Accept(listenfd,
-                        (struct sockaddr *)&cliaddr, &cliaddr_len);
+        connfd = Accept(listenfd, (struct sockaddr *)&cliaddr, &cliaddr_len);
         while (1) {
             n = Read(connfd, buf, MAXLINE);
             if (n == 0) {
