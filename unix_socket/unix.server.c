@@ -11,7 +11,7 @@ int main(void)
 {
     char name[] = "unix.socket";
     char buf[MAXLINE];
-    int listenfd = serv_listen(&name);
+    int listenfd = serv_listen(name);
     if (listenfd <= 0)
         perror("listen failed");
 
