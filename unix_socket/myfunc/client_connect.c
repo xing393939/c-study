@@ -26,7 +26,7 @@ int cli_conn(const char *name)
     sprintf(un.sun_path, "%s%05d", CLI_PATH, getpid());
     len = offsetof(struct sockaddr_un, sun_path) + strlen(un.sun_path);
 
-    unlink(un.sun_path);        /* in case it already exists */
+    unlink(un.sun_path);
     if (bind(fd, (struct sockaddr *)&un, len) < 0) {
         rval = -2;
         goto errout;
@@ -43,7 +43,7 @@ int cli_conn(const char *name)
     }
     return(fd);
 
-    errout:
+errout:
     err = errno;
     close(fd);
     errno = err;

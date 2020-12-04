@@ -1,13 +1,25 @@
 #include <stdio.h>
 #include <unistd.h>
-#include <arpa/inet.h>
 #include <string.h>
 #include "myfunc/wrap.h"
 
 #define MAXLINE 80
-#define SERV_PORT 8000
+
 int main(int argc, char *argv[])
 {
+    char name[] = "unix.socket";
+    char buf[MAXLINE];
+    int sockfd = cli_conn(&name);
+    if (sockfd <= 0)
+        perror("listen failed");
 
-    return 1;
+    char str[] = "hello";
+    write(sockfd, str, strlen(str));
+
+    int n = read(sockfd, buf, MAXLINE);
+    printf("Response from server:\n");
+    write(STDOUT_FILENO, buf, n);
+
+    close(sockfd);
+    return 0;
 }
