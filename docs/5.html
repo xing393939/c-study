@@ -883,6 +883,31 @@
 </ul>
 </li>
 </ol>
+<h4 id="&#x9644;&#x5F55;-a-&#x5B57;&#x7B26;&#x7F16;&#x7801;">&#x9644;&#x5F55; A. &#x5B57;&#x7B26;&#x7F16;&#x7801;</h4>
+<ol>
+<li>ASCII&#x7801;&#xFF1A;<ul>
+<li>ASCII&#x7801;&#x7684;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x662F;0~127&#xFF0C;&#x5E76;&#x6CA1;&#x6709;&#x89C4;&#x5B9A;&#x7F16;&#x53F7;&#x4E3A;128~255&#x7684;&#x5B57;&#x7B26;</li>
+<li>&#x6700;&#x5E7F;&#x6CDB;&#x4F7F;&#x7528;&#x7684;&#x6269;&#x5C55;ASCII&#x7801;&#x662F;ISO-8859-1&#xFF0C;&#x5B9A;&#x4E49;&#x4E86;128~255&#x7684;&#x5B57;&#x7B26;&#xFF0C;&#x4E5F;&#x79F0;&#x4E3A;Latin-1</li>
+</ul>
+</li>
+<li>Unicode&#x9700;&#x8981;&#x89E3;&#x51B3;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x56E0;&#x4E3A;&#x9700;&#x8981;&#x591A;&#x5B57;&#x8282;&#xFF0C;&#x4F1A;&#x548C;C&#x8BED;&#x8A00;&#x4E0D;&#x517C;&#x5BB9;&#xFF08;C&#x8BED;&#x8A00;&#x4E2D;0&#x5B57;&#x8282;&#x8868;&#x793A;&#x5B57;&#x7B26;&#x4E32;&#x7ED3;&#x5C3E;&#xFF09;&#xFF0C;&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#x662F;UTF-8</li>
+<li>UTF-8&#x5177;&#x6709;&#x4EE5;&#x4E0B;&#x6027;&#x8D28;&#xFF1A;<ul>
+<li>UTF-8&#x7F16;&#x7801;&#x6700;&#x957F;6&#x4E2A;&#x5B57;&#x8282;</li>
+<li>&#x4E00;&#x5B57;&#x8282;&#xFF1A;0x00~0x7F&#xFF0C;&#x548C;ASCII&#x7801;&#x517C;&#x5BB9;</li>
+<li>&#x4E8C;&#x5B57;&#x8282;: 0080~07FF&#xFF0C;110xxxxx 10xxxxxx</li>
+<li>&#x4E09;&#x5B57;&#x8282;: 0800~FFFF&#xFF0C;1110xxxx 10xxxxxx 10xxxxxx</li>
+<li>&#x56DB;&#x5B57;&#x8282;: 00010000~001FFFFF&#xFF0C;11110xxx 10xxxxxx 10xxxxxx 10xxxxxx</li>
+<li>&#x4E94;&#x5B57;&#x8282;: 00200000~03FFFFFF&#xFF0C;111110xx 10xxxxxx 10xxxxxx 10xxxxxx 10xxxxxx</li>
+<li>&#x516D;&#x5B57;&#x8282;: 04000000~7FFFFFFF&#xFF0C;1111110x 10xxxxxx 10xxxxxx 10xxxxxx 10xxxxxx 10xxxxxx</li>
+</ul>
+</li>
+<li>Unicode&#x8F6C;UTF-8&#xFF1A;<ul>
+<li>Unicode&#x4E2D;&#x672C;&#x6765;&#x662F;20902&#x4E2A;&#x6C49;&#x5B57;&#xFF08;\u4e00-\u9fa5&#xFF09;&#xFF0C;&#x540E;&#x589E;&#x52A0;&#x4E86;6582&#x4E2A;&#xFF08;0x3400-0x4db5&#xFF09;</li>
+<li>&#x4EE5;&#x6C49;&#x5B57;&#x201C;&#x4F60;&#x201D;&#x4E3A;&#x4F8B;&#xFF0C;Unicode=\u4f60&#xFF0C;&#x8F6C;&#x6362;&#x6210;&#x4E8C;&#x8FDB;&#x5236;&#x662F;100 111101 100000&#xFF0C;&#x4F7F;&#x7528;&#x4E09;&#x5B57;&#x8282;&#x6A21;&#x677F;&#x662F;111001001011110110100000&#xFF0C;16&#x8FDB;&#x5236;&#x662F;0xe4bda0&#xFF0C;&#x5982;&#x679C;&#x662F;&#x5C0F;&#x7AEF;&#x8F93;&#x5165;&#x5219;&#x662F;0xa0bde4</li>
+</ul>
+</li>
+<li>&#x5BBD;&#x5B57;&#x7B26;&#xFF1A;&#x5B57;&#x7B26;&#x4E32;&#x5B57;&#x9762;&#x503C;&#x524D;&#x9762;&#x52A0;&#x4E00;&#x4E2A;L&#x5C31;&#x8868;&#x793A;&#x5BBD;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;L&quot;&#x4F60;&#x597D;&quot;&#x5C31;&#x76F8;&#x5F53;&#x4E8E;{L&apos;&#x4F60;&apos;, L&apos;&#x597D;&apos;, 0}</li>
+</ol>
 
                                 
                                 </section>
@@ -922,7 +947,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"5.Linux系统编程","level":"1.6","depth":1,"next":{"title":"6.杂项","level":"1.7","depth":1,"ref":"","articles":[{"title":"a.CPU指令的执行","level":"1.7.1","depth":2,"path":"docs/a.md","ref":"docs/a.md","articles":[]},{"title":"b.printf函数规定符","level":"1.7.2","depth":2,"path":"docs/b.md","ref":"docs/b.md","articles":[]},{"title":"c.基本数据类型所占内存大小","level":"1.7.3","depth":2,"path":"docs/c.md","ref":"docs/c.md","articles":[]},{"title":"d.CPU内部组成","level":"1.7.4","depth":2,"path":"docs/d.md","ref":"docs/d.md","articles":[]},{"title":"e.左值和右值的区别","level":"1.7.5","depth":2,"path":"docs/e.md","ref":"docs/e.md","articles":[]},{"title":"f.个人理解的C语言","level":"1.7.6","depth":2,"path":"docs/f.md","ref":"docs/f.md","articles":[]}]},"previous":{"title":"4.C语言本质","level":"1.5","depth":1,"path":"docs/4.md","ref":"docs/4.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/5.md","mtime":"2020-12-04T07:58:58.442Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-04T07:59:27.651Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"5.Linux系统编程","level":"1.6","depth":1,"next":{"title":"6.杂项","level":"1.7","depth":1,"ref":"","articles":[{"title":"a.CPU指令的执行","level":"1.7.1","depth":2,"path":"docs/a.md","ref":"docs/a.md","articles":[]},{"title":"b.printf函数规定符","level":"1.7.2","depth":2,"path":"docs/b.md","ref":"docs/b.md","articles":[]},{"title":"c.基本数据类型所占内存大小","level":"1.7.3","depth":2,"path":"docs/c.md","ref":"docs/c.md","articles":[]},{"title":"d.CPU内部组成","level":"1.7.4","depth":2,"path":"docs/d.md","ref":"docs/d.md","articles":[]},{"title":"e.左值和右值的区别","level":"1.7.5","depth":2,"path":"docs/e.md","ref":"docs/e.md","articles":[]},{"title":"f.个人理解的C语言","level":"1.7.6","depth":2,"path":"docs/f.md","ref":"docs/f.md","articles":[]}]},"previous":{"title":"4.C语言本质","level":"1.5","depth":1,"path":"docs/4.md","ref":"docs/4.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/5.md","mtime":"2020-12-08T07:28:05.925Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-08T07:28:38.036Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
