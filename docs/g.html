@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>c.基本数据类型所占内存大小 · GitBook</title>
+        <title>g.指针的指针 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="d.html" />
     
-    
-    <link rel="prev" href="b.html" />
+    <link rel="prev" href="f.html" />
     
 
     </head>
@@ -209,7 +207,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.7.3" data-path="c.html">
+        <li class="chapter " data-level="1.7.3" data-path="c.html">
             
                 <a href="c.html">
             
@@ -261,7 +259,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.7" data-path="g.html">
+        <li class="chapter active" data-level="1.7.7" data-path="g.html">
             
                 <a href="g.html">
             
@@ -309,7 +307,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >c.基本数据类型所占内存大小</a>
+        <a href=".." >g.指针的指针</a>
     </h1>
 </div>
 
@@ -324,112 +322,45 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x6240;&#x5360;&#x5185;&#x5B58;&#x5927;&#x5C0F;">&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x6240;&#x5360;&#x5185;&#x5B58;&#x5927;&#x5C0F;</h3>
+                                <h3 id="&#x6307;&#x9488;&#x7684;&#x6307;&#x9488;">&#x6307;&#x9488;&#x7684;&#x6307;&#x9488;</h3>
+<h4 id="&#x53C2;&#x8003;&#x8D44;&#x6599;">&#x53C2;&#x8003;&#x8D44;&#x6599;</h4>
 <ol>
-<li><a href="https://blog.csdn.net/zcyzsy/article/details/77935651" target="_blank">C/C++&#x4E2D;&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x6240;&#x5360;&#x5185;&#x5B58;&#x5927;&#x5C0F;</a></li>
-<li>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#xFF1A;<ul>
-<li>&#x6C42;&#x6570;&#x7EC4;&#x5927;&#x5C0F;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x6570;&#x7EC4;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x65F6;&#xFF0C;&#x9000;&#x5316;&#x4E3A;&#x6307;&#x9488;&#xFF0C;&#x6240;&#x4EE5;sizeof(arr)&#x5927;&#x5C0F;&#x4E3A;&#x8BE5;&#x7CFB;&#x7EDF;&#x4E0B;&#x6307;&#x9488;&#x7684;&#x5927;&#x5C0F;</li>
-<li>&#x5BF9;&#x4E8E;C&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x9700;&#x8981;&#x7262;&#x8BB0;C/C++&#x4E2D;&#x4E00;&#x4E2A;&#x6C49;&#x5B57;&#x5360;&#x4E24;&#x4E2A;&#x5B57;&#x8282;(Linux&#x4E0B;3&#x4E2A;&#x5B57;&#x8282;)</li>
-<li>&#x6C42;struct&#x6216;class&#x7684;&#x5927;&#x5C0F;&#x65F6;&#x5019;&#xFF0C;&#x9664;&#x4E86;&#x57FA;&#x672C;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x5927;&#x5C0F;&#xFF0C;&#x7279;&#x522B;&#x8981;&#x8003;&#x8651;&#x7684;&#x662F;&#x5B57;&#x8282;&#x5BF9;&#x9F50;&#x95EE;&#x9898;&#xFF0C;&#x5982;&#x679C;&#x662F;C++&#x7684;&#x8FD8;&#x6D89;&#x53CA;&#x865A;&#x51FD;&#x6570;&#x7684;&#x865A;&#x8868;&#x95EE;&#x9898;&#xFF0C;&#x9700;&#x8981;&#x52A0;&#x4E0A;&#x865A;&#x8868;&#x6307;&#x9488;&#x7684;&#x5927;&#x5C0F;</li>
-</ul>
-</li>
-<li><a href="https://blog.csdn.net/sunweiliang/article/details/82622038" target="_blank">&#x5173;&#x4E8E;float/double&#x7684;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x3001;&#x7CBE;&#x5EA6;&#x548C;&#x8868;&#x793A;</a><ul>
-<li>&#x79D1;&#x5B66;&#x8BA1;&#x6570;&#x6CD5;&#xFF1A;8.25*10^0 = &#x5C3E;&#x6570; &#xD7; &#x5E95;&#x6570; ^ &#x6307;&#x6570; = 1000.01 x 2 ^ 0 = 1.0001 x 2 ^ 3 = 0 10000010 0001000 00000000 00000000</li>
-<li>float&#xFF0C;&#x7B26;&#x53F7;&#x4F4D;1&#x4F4D;&#xFF0C;&#x6307;&#x6570;8&#x4F4D;&#xFF0C;&#x5C3E;&#x6570;23&#x4F4D;&#xFF0C;&#x5C3E;&#x6570;&#x7B2C;&#x4E00;&#x4F4D;&#x7684;1&#x53EF;&#x4EE5;&#x7701;&#x7565;&#xFF0C;&#x6240;&#x4EE5;&#x7CBE;&#x5EA6;&#x662F;24&#x4F4D;</li>
-<li>float&#xFF0C;&#x6B63;&#x6570;&#x7684;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x4E3A;+1.111111111111111111111<em>2^127 &#x2248; 2</em>2^127 &#x2248; 3.4*10^38</li>
-<li>double&#xFF0C;&#x7B26;&#x53F7;&#x4F4D;1&#x4F4D;&#xFF0C;&#x6307;&#x6570;11&#x4F4D;&#xFF0C;&#x5C3E;&#x6570;52&#x4F4D;</li>
-<li>float&#x7684;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x6BD4;int&#x5927;&#x5F88;&#x591A;&#xFF0C;&#x4F46;&#x662F;&#x7CBE;&#x5EA6;&#x53D7;&#x5C3E;&#x6570;(2^23)&#x9650;&#x5236;&#xFF0C;&#x6700;&#x591A;&#x6709;7&#x4E2A;&#x6709;&#x6548;&#x4F4D;</li>
-<li>MySQL&#x7684;float(M, D)&#xFF0C;M&#x8868;&#x793A;&#x8BE5;&#x503C;&#x7684;&#x603B;&#x5171;&#x957F;&#x5EA6;&#xFF0C;D&#x8868;&#x793A;&#x5C0F;&#x6570;&#x70B9;&#x540E;&#x9762;&#x7684;&#x957F;&#x5EA6;&#xFF0C;M&#x6700;&#x5927;&#x53D6;7</li>
-<li>MySQL&#x7684;decimal(M, D)&#xFF0C;M&#x6700;&#x5927;&#x53D6;65&#xFF0C;D&#x6700;&#x5927;&#x53D6;30&#x3002;&#x6BCF;9&#x4E2A;&#x957F;&#x5EA6;&#x5360;&#x7528;4&#x4E2A;&#x5B57;&#x8282;&#xFF0C;&#x4E0D;&#x8DB3;9&#x4F4D;&#x7684;&#x6309;&#x516C;&#x5F0F;(1~2=1 3~4=2 5~6=3 7~8=4)</li>
-<li>decimal(18, 9)&#xFF0C;&#x6574;&#x6570;&#x90E8;&#x5206;&#x957F;&#x5EA6;&#x4E3A;9&#xFF0C;&#x5206;&#x6570;&#x90E8;&#x5206;&#x957F;&#x5EA6;&#x4E3A;9&#xFF1B;&#x6240;&#x4EE5;&#x6574;&#x6570;&#x90E8;&#x5206;&#x5360;&#x7528;4&#x5B57;&#x8282;&#xFF0C;&#x5206;&#x6570;&#x90E8;&#x5206;&#x5360;&#x7528;4&#x5B57;&#x8282;</li>
-<li>decimal(20, 6)&#xFF0C;&#x6574;&#x6570;&#x90E8;&#x5206;&#x957F;&#x5EA6;&#x4E3A;14&#xFF0C;&#x5206;&#x6570;&#x90E8;&#x5206;&#x957F;&#x5EA6;&#x4E3A;6&#xFF1B;&#x6574;&#x6570;&#x90E8;&#x5206;&#x5360;&#x7528;4+3=7&#x5B57;&#x8282;&#xFF0C;&#x5206;&#x6570;&#x90E8;&#x5206;&#x5360;&#x7528;3&#x5B57;&#x8282;</li>
-</ul>
+<li><a href="http://akaedu.github.io/book/ch24s03.html" target="_blank">&#x4E24;&#x5C42;&#x6307;&#x9488;&#x7684;&#x53C2;&#x6570;</a></li>
+</ol>
+<h4 id="&#x8BF4;&#x660E;">&#x8BF4;&#x660E;</h4>
+<ol>
+<li>&#x4E24;&#x5C42;&#x6307;&#x9488;&#x53C2;&#x6570;&#x5982;&#x679C;&#x662F;&#x4F20;&#x51FA;&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x6709;&#x4E24;&#x79CD;&#x60C5;&#x51B5;&#xFF1A;<ol>
+<li>&#x4F20;&#x51FA;&#x7684;&#x6307;&#x9488;&#x6307;&#x5411;&#x9759;&#x6001;&#x5185;&#x5B58;</li>
+<li>&#x4F20;&#x51FA;&#x7684;&#x6307;&#x9488;&#x6307;&#x5411;&#x5DF2;&#x5206;&#x914D;&#x7684;&#x52A8;&#x6001;&#x5185;&#x5B58;&#xFF08;&#x6BD4;&#x5982;&#x94FE;&#x8868;&#xFF09;</li>
+</ol>
 </li>
 </ol>
-<table>
-<thead>
-<tr>
-<th>&#x6570;&#x636E;&#x7C7B;&#x578B;</th>
-<th>32&#x4F4D;</th>
-<th>64&#x4F4D;</th>
-<th>&#x53D6;&#x503C;&#x8303;&#x56F4;&#xFF08;32&#x4F4D;&#xFF09;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>char</td>
-<td>1</td>
-<td>1</td>
-<td>-128~127</td>
-</tr>
-<tr>
-<td>unsigned char</td>
-<td>1</td>
-<td>1</td>
-<td>0~255</td>
-</tr>
-<tr>
-<td>short int /short</td>
-<td>2</td>
-<td>2</td>
-<td>&#x2013;32768~32767</td>
-</tr>
-<tr>
-<td>unsigned short</td>
-<td>2</td>
-<td>2</td>
-<td>0~65535</td>
-</tr>
-<tr>
-<td>int</td>
-<td>4</td>
-<td>4</td>
-<td>-2147483648~2147483647</td>
-</tr>
-<tr>
-<td>unsigned int</td>
-<td>4</td>
-<td>4</td>
-<td>0~4294967295</td>
-</tr>
-<tr>
-<td>long int /long</td>
-<td>4</td>
-<td>8</td>
-<td>&#x2013;2147483648~2147483647</td>
-</tr>
-<tr>
-<td>unsigned long</td>
-<td>4</td>
-<td>8</td>
-<td>0~4294967295</td>
-</tr>
-<tr>
-<td>long long int</td>
-<td>8</td>
-<td>8</td>
-<td>-9223372&#x4E07;&#x4EBF;~9223372&#x4E07;&#x4EBF;</td>
-</tr>
-<tr>
-<td>&#x6307;&#x9488;</td>
-<td>4</td>
-<td>8</td>
-<td></td>
-</tr>
-<tr>
-<td>float&#x3000;&#x3000;</td>
-<td>4</td>
-<td>4</td>
-<td>3.4E +/- 38 (7 digits)</td>
-</tr>
-<tr>
-<td>double</td>
-<td>8</td>
-<td>8</td>
-<td>1.7E +/- 308 (15 digits)</td>
-</tr>
-</tbody>
-</table>
+<pre><code class="lang-c"><span class="hljs-comment">// 1. &#x4F20;&#x51FA;&#x7684;&#x6307;&#x9488;&#x6307;&#x5411;&#x9759;&#x6001;&#x5185;&#x5B58;</span>
+<span class="hljs-keyword">static</span> <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *msg[] = {<span class="hljs-string">&quot;Sunday&quot;</span>, <span class="hljs-string">&quot;Monday&quot;</span>, <span class="hljs-string">&quot;Tuesday&quot;</span>, <span class="hljs-string">&quot;Wednesday&quot;</span>,
+            <span class="hljs-string">&quot;Thursday&quot;</span>, <span class="hljs-string">&quot;Friday&quot;</span>, <span class="hljs-string">&quot;Saturday&quot;</span>};
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">get_a_day</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> **pp)</span>
+</span>{
+     <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;
+     *pp = msg[i%<span class="hljs-number">7</span>];
+     i++;
+}
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *firstday = <span class="hljs-literal">NULL</span>;
+get_a_day(&amp;firstday);
+
+<span class="hljs-comment">// 2. &#x4F20;&#x51FA;&#x7684;&#x6307;&#x9488;&#x6307;&#x5411;&#x5DF2;&#x5206;&#x914D;&#x7684;&#x52A8;&#x6001;&#x5185;&#x5B58;&#xFF08;&#x6BD4;&#x5982;&#x94FE;&#x8868;&#xFF09;</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">alloc_unit</span><span class="hljs-params">(Elf64_Sym **pp)</span>
+</span>{
+     Elf64_Sym *p = <span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(Elf64_Sym));
+     <span class="hljs-keyword">if</span>(p == <span class="hljs-literal">NULL</span>) {
+      <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;out of memory\n&quot;</span>);
+      <span class="hljs-built_in">exit</span>(<span class="hljs-number">1</span>);
+     }
+     p-&gt;st_info = <span class="hljs-string">&quot;1&quot;</span>;
+     *pp = p;
+}
+Elf64_Sym *a = <span class="hljs-literal">NULL</span>;
+alloc_unit(&amp;a);
+</code></pre>
 
                                 
                                 </section>
@@ -457,14 +388,10 @@
 
             
                 
-                <a href="b.html" class="navigation navigation-prev " aria-label="Previous page: b.printf函数规定符">
+                <a href="f.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: f.个人理解的C语言">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="d.html" class="navigation navigation-next " aria-label="Next page: d.CPU内部组成">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -473,7 +400,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"c.基本数据类型所占内存大小","level":"1.7.3","depth":2,"next":{"title":"d.CPU内部组成","level":"1.7.4","depth":2,"path":"docs/d.md","ref":"docs/d.md","articles":[]},"previous":{"title":"b.printf函数规定符","level":"1.7.2","depth":2,"path":"docs/b.md","ref":"docs/b.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/c.md","mtime":"2021-03-17T02:56:02.540Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-17T02:56:29.068Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"g.指针的指针","level":"1.7.7","depth":2,"previous":{"title":"f.个人理解的C语言","level":"1.7.6","depth":2,"path":"docs/f.md","ref":"docs/f.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/g.md","mtime":"2021-03-17T02:56:02.540Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-17T02:56:29.068Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
