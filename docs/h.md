@@ -27,7 +27,7 @@ void testArgs(int arr1[][2], int (*arr2)[2], int **arr3) {
     printf("%d\n", arr2[1][0]);
 }
 int main(int argc, char *argv[]) {
-    int arr1[][2] = {{1, 2}, {3, 4}};
+    int arr1[][2] = { {1, 2}, {3, 4} };
     int (*arr2)[2] = arr1;
     int **arr3 = (int **) arr1;
     testArgs(arr1, arr2, arr3);
