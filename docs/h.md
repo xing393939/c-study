@@ -5,18 +5,18 @@
 
 #### 三种传参形式
 1. 形参为二维数组：function(int a\[row]\[col])
-  * 取第i行第j列：*((int *)a + i * col + j)
+  * 取第i行第j列：\*((int *)a + i * col + j)
   * a\[i]\[j]也行
 1. 形参为数组指针：function(int (*a)\[col])
-  * 取第i行第j列：*((int *)a + i * col + j)
+  * 取第i行第j列：\*((int *)a + i * col + j)
   * a\[i]\[j]也行
 1. 形参为二级指针：function(int **a, int col)
-  * 取第i行第j列：*((int *)a + i * col + j)
+  * 取第i行第j列：\*((int *)a + i * col + j)
   * a\[i]\[j]不行
   
 #### 数组指针和指针数组
 1. 数组指针也称为行指针，int (*p)\[3]表示p是指向二维数组(列数是3)的指针，p指向第0行，p+1指向第1行。
-1. 指针数组int *p\[3]表示p是一个数组，数组元素类型是int *。
+1. 指针数组int \*p\[3]表示p是一个数组，数组元素类型是int \*。
   
 ```c
 void testArgs(int arr1[][2], int (*arr2)[2], int **arr3) {
