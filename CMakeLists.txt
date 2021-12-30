@@ -4,6 +4,8 @@ project(untitled)
 
 set(CMAKE_CXX_STANDARD 14)
 
+add_executable(epoll_lt epoll/lt.c)
+
 add_executable(test_unicode easy/test_unicode.cpp)
 add_executable(test_sizeof easy/test_sizeof.cpp)
 add_executable(test_strcpy easy/test_strcpy.cpp)
