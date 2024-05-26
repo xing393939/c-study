@@ -63,10 +63,9 @@ void server(int epfd, int mode) {
     }
 }
 
-
 static void siguser_handler(int sig) {
     // 在主进程被Ctrl-C退出的时候，每一个子进程均要打印自己处理了多少个请求。
-    printf("pid:%d  count:%d\n", getpid(), count);
+    printf("pid %d count %d\n", getpid(), count);
     exit(0);
 }
 
